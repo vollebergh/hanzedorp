@@ -14,7 +14,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `provincie_overijssel.md` | Provinciaal referentiekader Overijssel |
 | `provincie_gelderland.md` | Provinciaal referentiekader Gelderland |
 | `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle |
-| `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen (concept) |
+| `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen |
 
 ## Doel van prompt.md
 
