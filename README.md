@@ -14,7 +14,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `provincie_overijssel.md` | Provinciaal referentiekader Overijssel |
 | `provincie_gelderland.md` | Provinciaal referentiekader Gelderland |
 | `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle |
-| `gemeente_kampen.md` | Beleidsinventarisatie gemeente Kampen (concept, nog aan te vullen: bronnen waren niet rechtstreeks raadpleegbaar, bevindingen rusten op zoeksamenvattingen; onderzoek opnieuw uitvoeren met toegang tot kampen.nl, CVDR, officielebekendmakingen.nl en planviewer.nl) |
+| `gemeente_kampen.md` | Beleidsinventarisatie gemeente Kampen (geverifieerd aan brondocumenten, 2026-10-05; raadsstukken in het RIS niet toegankelijk) |
 | `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen |
 | `gemeente_olst-wijhe.md` | Beleidsinventarisatie gemeente Olst-Wijhe (geverifieerd aan brondocumenten, 2026-10-05) |
 | `gemeente_deventer.md` | Stub gemeente Deventer (BuitenDelen); volledig onderzoek volgt |
