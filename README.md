@@ -15,6 +15,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `provincie_gelderland.md` | Provinciaal referentiekader Gelderland |
 | `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle |
 | `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen |
+| `gemeente_deventer.md` | Stub gemeente Deventer (BuitenDelen); volledig onderzoek volgt |
 
 ## Doel van prompt.md
 
@@ -26,3 +27,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 Elk rapport noemt bronnen met URL en raadpleegdatum en sluit af met twee kernvragen: biedt het beleid ruimte voor 10-12 woningen buiten de kernen, en voor omzetting van agrarische grond naar woonfunctie op die schaal?
 
 De rapporten zijn bedoeld als referentie voor zowel mensen als LLM's.
+
+## Werkwijze
+
+De repository wordt beheerd door één persoon. Er wordt niet met branches of pull requests gewerkt: commits gaan direct naar `main`, en elke gemeente krijgt een eigen rapport (`gemeente_<naam>.md`).
