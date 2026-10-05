@@ -1,6 +1,6 @@
 # Gemeente Dalfsen — CPO-naslagwerk (provincie Overijssel)
 
-> **Status: geverifieerde versie (2026-10-04).** De conceptversie van 2026-10-02 steunde volledig op zoekmachine-samenvattingen. In deze versie zijn de kernbronnen integraal gelezen (zie "Gelezen bronnen" en §13). Wat nog alleen uit een zoeksamenvatting komt, is gemarkeerd met **[Z]**. Belangrijkste correcties ten opzichte van het concept staan in het kader "Gecorrigeerd" hieronder.
+> **Status: geverifieerde versie (2026-10-04; aangevuld 2026-10-05).** De conceptversie van 2026-10-02 steunde volledig op zoekmachine-samenvattingen. In deze versie zijn de kernbronnen integraal gelezen (zie "Gelezen bronnen" en §13). Wat nog alleen uit een zoeksamenvatting komt, is gemarkeerd met **[Z]**. Belangrijkste correcties ten opzichte van het concept staan in het kader "Gecorrigeerd" hieronder.
 
 ## Verantwoording
 - **Raadplegingsdatum:** gelezen bronnen 2026-10-04; bevindingen gemarkeerd met [Z] stammen uit zoekresultaten van 2026-10-02.
@@ -8,11 +8,13 @@
 - **Primair model en effort:**
   - Concept (2026-10-02): model niet vermeld (de sessieconfiguratie stond modelvermeldingen toen niet toe).
   - Verificatieronde en herschrijving (2026-10-04): Claude Opus 5.5 (`claude-opus-5-5`), effort-niveau niet expliciet ingesteld of bekend.
+  - Aanvulling (2026-10-05): Claude Sonnet 5.5 (`claude-sonnet-5-5`), effort-niveau niet expliciet ingesteld of bekend.
 - **Deelonderzoeken (Fase 2):** het concept is gemaakt met vier deelonderzoeken (1 bestuursinformatie; 2 provinciaal-lokale toepassing; 3 nieuws en actualiteit 2024-2026; 4 juridische en officiële registers), allemaal met hetzelfde model als het primaire model van die run. De verificatieronde is zonder subagents uitgevoerd door het primaire model.
 - **Methode verificatieronde:**
   - Brondocumenten zijn gedownload en als tekst doorzocht en gelezen (PDF-tekstextractie).
   - De volledige CVDR-index van Dalfsen (397 regelingen gewijzigd sinds 2020; zoekservice.overheid.nl, creator = Dalfsen) is gebruikt om elk CVDR-nummer op uitgever te toetsen.
   - Stukken uit het raadsinformatiesysteem (ris.dalfsen.nl, achter een browsercheck) zijn via een gewone browser geopend en gelezen.
+  - Aanvulling 2026-10-05: kaartlagen van de provincie (WFS services.geodataoverijssel.nl) gecombineerd met de gemeentegrens (PDOK, CBS-gebiedsindelingen 2024), en Gemeenteblad en Provinciaal blad doorzocht via de SRU-zoekservice van overheid.nl (repository.overheid.nl/sru).
 - **Provinciaal kader:** zie [`provincie_overijssel.md`](provincie_overijssel.md) (Omgevingsvisie, KGO/art. 4.11, subsidies, voorkantsamenwerking/Lijst BOPA). Dit rapport herhaalt dat kader niet en behandelt de Dalfser toepassing. Dalfsen ligt in Overijssel; het Overijsselse regime is leidend voor het omgevingsplan.
 - **Regio:** Dalfsen ligt in de woonregio **West-Overijssel** (Woondeal West-Overijssel 2025-2030; verstedelijkingsstrategie Regio Zwolle) en grenst aan Zwolle, Staphorst, Ommen, Hardenberg, Raalte en Zwartewaterland, allemaal Overijssel. Er is geen provinciegrensoverschrijdende woonregio.
 - **Markering:** zonder markering = gelezen in de genoemde bron (2026-10-04). **[Z]** = alleen via zoeksamenvatting (2026-10-02), niet in de bron geverifieerd. **[I]** = interpretatie van de samensteller. **[T]** = trainingskennis, niet live geverifieerd.
@@ -26,14 +28,21 @@
 > 6. **De Tuindershof (Ankummer Es)** blijkt een echt precedent: 17 woningen op voormalige tuinderserven aan de kern Dalfsen via de KGO, met afwijking van Sloop voor kansen en "in overleg met de provincie" (§6).
 > 7. **Gemeentelijke CPO** is uitsluitend sociale koop voor starters met individuele inschrijving en notariële loting; een al gevormde groep kan zich niet als groep inschrijven (§1).
 > 8. "CPO-deelnemers krijgen korting op de grondprijs" is niet bevestigd: zij betalen de (lagere) categorieprijs sociale koop (§5).
-> 9. "Voorkeursrecht Het Engelland afgelopen 28-2-2025" is niet bevestigd; het wijzigingsbesluit Het Engelland diende juist mede als grondslag voor verlenging van het voorkeursrecht (§2.1).
+> 9. "Voorkeursrecht Het Engelland afgelopen 28-2-2025" is niet bevestigd: het voorkeursrecht (gevestigd 2021) gold volgens de plantoelichting tot 28-2-2025, en het wijzigingsbesluit Het Engelland (3-2-2025) schept "voldoende grondslag voor verlenging". Of het is verlengd, is niet gevonden (§2.1).
+> 10. **Natura 2000 ligt niet in Dalfsen** (kaartlaag, §3.7): de conceptclaim dat het Vecht- en Beneden-Reggegebied "deels in Dalfsen" ligt is niet bevestigd. Beide gebieden grenzen aan de gemeentegrens (7 m en 41 m op de gegeneraliseerde grens) maar overlappen niet; bij de projectlocaties liggen ze 2,6-6,6 km weg.
+> 11. **Sleutelprojecten Woondeal** zijn opgelost met Bijlage 1 van de Woondeal: 5 projecten, 1.039 woningen, met namen (§5). De "tegenstrijdigheid" met het VHP (4 projecten, 840-880 woningen) betrof een ouder peilmoment (Woondeal 2022).
+> 12. **Vosserburen** is vergund via een omgevingsvergunning in de uitgebreide procedure met verklaring van geen bedenkingen van de raad: aanvraag 29-12-2023, besluit 20-12-2024 (§6).
+> 13. **KGO-onderbouwing De Tuindershof gelezen:** genoemde investering ca. € 484.000 excl. btw (§6).
+> 14. **Zetelverdeling 2026** uit een gelezen bron bevestigd (§10.1). "PRO Dalfsen" blijft niet geïdentificeerd.
+> 15. **Het provinciale Volkshuisvestingsprogramma** (ontwerp, GS 30-6-2026) en het voorbeeld BuitenDelen (CPO op voormalig agrarisch erf, Lettele/Deventer) zijn nieuw gevonden; zie `provincie_overijssel.md` §5 en §2.4.
+> 16. **Het Engelland en Dalfsen-Noord zijn dezelfde locatie** (ca. 35 ha; §2.1). Het concept telde ze in §5 als twee locaties; de rij Dalfsen-Noord is vervallen.
 
 ## 0. Kernfeiten in één oogopslag
 
 | Onderwerp | Bevinding |
 |---|---|
 | Positie provinciaal kader | "Overige kern" (art. 4.4): alleen lokale behoefte en bijzondere doelgroepen, tenzij regionale afspraak (`provincie_overijssel.md`) |
-| Woonregio | West-Overijssel; Woondeal 2025-2030. VHP noemt voor Dalfsen een basisinspanning van 840-880 woningen in vier sleutelprojecten (peildatum 2021, herijking eind 2024); het provinciebestand noemt 5 sleutelprojecten / 1.039 woningen (zie §5) |
+| Woonregio | West-Overijssel; Woondeal 2025-2030 (Actualisatie 20-3-2025, Bijlage 1): Dalfsen 479 woningen gerealiseerd Q1 2022-Q4 2024; 5 sleutelprojecten 2024-2030 met 1.039 woningen (Nieuwleusen Centrum 250, Oosterdalfsen Noord 400, Waterinkweg 206, De Koele II 83, Het Engelland 100); doorkijk 2031-2035: 1.155 (o.a. Palthelanden 600, Het Engelland 400). Het VHP (oktober 2024) rekende nog met de vier sleutelprojecten van de Woondeal 2022 (840-880 woningen) |
 | CPO in de praktijk | Ja, structureel: gemeentelijke CPO voor **starters, sociale koop**, op gemeentegrond in alle kernen (2025-2026: Waterinkweg 12, Oosterdalfsen Noord 5, Pijlriet 10, Gele Lis 9, De Koele II 10, Muldersweg II 6; gereed 2025: Koekoeksbloem 10, Gersteland 5). Inschrijving individueel, groep via notariële loting. VHP: "in elke kern mogelijkheden voor CPO" en bewonerscollectieven faciliteren |
 | Eigen kader buitengebied | Beleidsregels Ontwikkelen met Kwaliteit in het Buitengebied 2022 (CVDR674315): Sloop voor kansen (rood-voor-rood), VAB-hergebruik, KGO. Rekenmodel: m² sloop per woning. **Maximaal drie extra woningen per erf via Sloop voor kansen**; VAB-hergebruik en KGO zijn maatwerk zonder vast maximum |
 | Programma Landelijk Gebied | College 10-2-2026, geldend 15-4-2026 (CVDR760428). In Weids Platteland en het heideontginningsdeel van Landelijk Lemelerveld (behalve De Strenkhaar) geen compensatiewoningen meer op eigen erf; Sloop voor kansen-rechten daar alleen inzetbaar in Parels in het landschap, Variatie rond de Vecht of in/tegen de kernen. Nieuwe Rood-voor-Groen/Blauw-regeling en kaders voor "alternatieve woonvormen op vrijkomende erven" nog uit te werken |
@@ -76,6 +85,14 @@ CVDR727504 (Notitie Adviesrecht en verplichte participatie: **Montfoort**; gelez
   - dalfsencity.nl 28-7-2025 (DSS) en 1-10-2026 (raad 30-9-2026).
   - DalfsenNet: terugblikken raad 15-9-2025 en 16-3-2026; Vosserburen.
   - Vechtdal Centraal: Vosserburen (juli 2026); stikstofbrief (september 2026).
+- **Aanvullend gelezen op 2026-10-05:**
+  - Woondeal West-Overijssel, Actualisatie 2025-2030, Bijlage 1 (sleutelprojecten); raadsmemo Actualisatie Woondeal (college 1-4-2025, raad 19-5-2025); Woonupdate 005 (raadsmemo, 8-7-2025); raadsvoorstel "Strategische keuzes Dalfsen West/Noord" (17-10-2023); toelichting 9e Verzamelplan Buitengebied (commissie 19-5-2025, 70 p., globaal doorzocht).
+  - KGO-onderbouwing De Tuindershof (Bureau voor Planvorming Advies, 14-2-2023) en de ruimtelijke onderbouwing (47 p.), RIS raad 16-3-2026 (bijlagen 7-1 en 7-3).
+  - Gemeenteblad: Bijlage 1 (kaart) bij CVDR705154 / Gmb 2023, 513200 (exb-2023-56527); Vosserburen: Gmb 2024, 11999, 454253 en 541698; 9e Verzamelplan en Erfwonen: Gmb 2023, 559954 en Gmb 2025, 259478; Straatnaambesluit De Tuindershof: Gmb 2026, 337369.
+  - Gemeentelijke webpagina's: https://www.dalfsen.nl/tiny-house-schuurwoningen-en-kleine-woningen-ruimtelijke-kwaliteit (met de drie beeldkwaliteitsplannen) en https://www.dalfsen.nl/vooroverleg-initiatiefnemer.
+  - Prestatieafspraken Wonen Dalfsen 2025 (Vechtdal Wonen/VechtHorst).
+  - Provincie: regeling 4.39 op regelen.overijssel.nl; Prb 2026, 11834 en 11967 (ontwerp Volkshuisvestingsprogramma Overijssel 2026-2035); Prb 2026, 11093 (subsidieplafonds); Omgevingstafel IJsselland (OD IJsselland); WFS-kaartlagen Provincie Overijssel.
+  - Verkiezingsuitslag 2026: Vechtdal Centraal (2026-03) en DalfsenNet-analyse (2026-03).
 
 ---
 
@@ -124,7 +141,12 @@ CVDR727504 (Notitie Adviesrecht en verplichte participatie: **Montfoort**; gelez
   - "We zetten daarom in de eerste plaats in op nieuwbouw op uitbreidingslocaties"; daarnaast ruimte voor inbreiding (verdichting, transformatie, splitsing);
   - meer focus op "grotere woningbouwlocaties of door combinatie van meerdere locaties".
 - **Coalitieakkoord 2026-2030:** de langere-termijnontwikkeling wordt meegenomen "bij de te actualiseren visie voor Dalfsen".
-- **Raadsbesluit 27-11-2023 "Strategische keuzes Dalfsen West/Noord"** [Z]: de raad koos Dalfsen-Noord (>500 woningen; uitgifte vanaf ca. 2033) als volgende woonlocatie en in Dalfsen-West voor géén actief grondbeleid (https://secure-dalfsen.gemeenteoplossingen.nl/Vergaderingen/Gemeenteraad/2023/27-november/15-Strategische-keuzes-Dalfsen-West-Noord-RVS.pdf; niet gelezen).
+- **Raadsvoorstel "Strategische keuzes Dalfsen West/Noord"** (college 17-10-2023, nr. 1668; raad 27-11-2023; gelezen 2026-10-05, https://ris.dalfsen.nl/Vergaderingen/Gemeenteraad/2023/27-november/15-Strategische-keuzes-Dalfsen-West-Noord-RVS.pdf):
+  - voorstel: **Dalfsen-Noord** (ca. 35 ha; ca. 566 woningen bij 45% uitgeefbaar) aanwijzen als volgende woningbouwlocatie voor de kern Dalfsen; voor **Dalfsen-West** (ca. 15 ha; ca. 213 woningen bij 40%) geen actieve grondpolitiek maar faciliteren ("uitnodigingsplanologie") met het landschappelijk karakter als toetsingscriterium; verwerken in Omgevingsvisie 2.0; grondverwerving Dalfsen-Noord uiterlijk 1-2-2025;
+  - **provincie:** na gesprekken met de provincie bleek dat Dalfsen-West "op een es" ligt, nabij Ankum; "De provincie heeft aangegeven dat ontwikkelingen in Dalfsen-West moeten plaatsvinden binnen de aanwezige landschappelijke waarden", wat een uitbreidingswijk van ca. 300 woningen belemmert; de raad bevestigde dat standpunt in een motie;
+  - voorkeursrecht (Wvg): Dalfsen-West vervalt 15-2-2024, Dalfsen-Noord 28-2-2025, geen verlenging meer mogelijk;
+  - de raadsbehandeling zelf staat niet in dit stuk; nieuwsberichten melden dat de raad Dalfsen-Noord koos [Z].
+  - **Dalfsen-Noord is dezelfde locatie als Het Engelland** (hieronder): plantoelichting Het Engelland noemt een gebied van ca. 35 ha, begrensd door Leemculeweg, Engellandweg, Koesteeg en Vossersteeg, en verwijst naar het raadsbesluit om "Dalfsen Noord als toekomstige nieuwbouwlocatie te kiezen". Het concept telde beide als aparte locaties.
 - **Het Engelland** (Gemeenteblad 2025, 74695; vastgesteld 3-2-2025, gepubliceerd 25-2-2025):
   - het wijzigingsbesluit wijst het agrarische gebied ten noorden van de kern Dalfsen aan als "Ontwikkelingsgebied Het Engelland" (voorrangsregels boven 'Agrarisch met Waarden' van het bestemmingsplan Buitengebied);
   - op termijn "circa 600 woningen", gefaseerd "circa 100 woningen per jaar", met als uitgangspunt 30% sociale huur;
@@ -269,6 +291,13 @@ Kassen tellen voor 20% van hun oppervlak mee. Sloop-m² vervallen 5 jaar na vast
 - tijdelijk deel o.a. bestemmingsplan Buitengebied 2013 (NL.IMRO.0148.BgemDalfsen-vs01, vastgesteld 24-6-2013) met 1e-8e Verzamelplan (2015-2022), de 4e herziening Plattelandswoningen (2014) en Chw Kernen 2016;
 - het 9e Verzamelplan Buitengebied was begin 2025 nog in ontwerp (Gmb 2025-74695).
 
+**Erfwonen: schuurwoningen, tiny houses en kleine woningen op het erf** (gelezen 2026-10-05):
+- Het **9e Verzamelplan Buitengebied** (Chw-bestemmingsplan) is vastgesteld (Gmb 2025, 259478; ter inzage 18-6 t/m 30-7-2025; plan-ID NL.IMRO.0148.9eVerzamelplanBG-vs01). Het neemt 22 verleende projectafwijkingsbesluiten, 19 herzieningen en 5 wijzigingsplannen op. Het ontwerp lag ter inzage van 30-12-2023 t/m 9-2-2024 (Gmb 2023, 559954).
+- Tegelijk zijn drie **beeldkwaliteitsplannen "Erfwonen Dalfsen"** vastgesteld (Het Oversticht; aanvulling op de welstandsnota), die plannen voor schuurwoningen, tiny houses en kleine woningen toetsen.
+- **Schuurwoningen** (BKP december 2022): bestaande schuur transformeren of een nieuwe schuurwoning toevoegen, binnen Sloop voor kansen of rood-voor-rood; ervenconsulentenadvies vooraf. Bestemmingsplanregels: maximaal 750 m³ per woning, geen apart bijgebouw of carport, goothoogte maximaal 4,5 m, bouwhoogte maximaal 10 m, dakhelling 40-60°. **"Bij een wijziging op het bestemmingsplan om (een) schuurwoning(en) mogelijk te maken is sprake van maatwerk (inhoud, aantal woningen, goot- en nokhoogte, etc.)."**
+- **Tiny houses:** maximaal 1 per erf, maximaal 50 m² incl. berging. **Kleine woningen:** maximaal 1 per erf, bijgebouw maximaal 50 m² (BKP versie 2-6-2025).
+- **Relevantie [I]:** het BKP geeft het vormkader (schuurachtige gebouwen met meerdere woningen) waarmee De Tuindershof 11 kleinere woningen in twee schuurwoningen onderbracht. Het aantal woningen per schuurwoning is maatwerk, niet begrensd.
+
 ### 3.2 Procedure bij provincie en raad
 **Adviesrecht en participatieplicht bij buitenplanse afwijkingen 2023** (CVDR705154; Gemeenteblad 2023, 513200; raad 27-11-2023; in werking 1-1-2024; gelezen):
 
@@ -281,7 +310,7 @@ Kassen tellen voor 20% van hun oppervlak mee. Sloop-m² vervallen 5 jaar na vast
 - In de kernen is de grens in 2023 verruimd van 3 naar 11 ("gelijkgesteld met de ladder").
 - Een negatief raadsadvies is bindend.
 - **Gevolg [I]:** een cluster van 10-12 woningen in het buitengebied via BOPA vraagt altijd bindend raadsadvies. In de praktijk wordt het conceptplan vroeg aan de raad voorgelegd (zoals bij De Tuindershof: opiniërend in de raadscommissie 11-9-2023, stedenbouwkundig plan raad 16-3-2026).
-- **Kanttekening:** het raadsvoorstel De Tuindershof (2026) past op die locatie de grens "meer dan 11" toe. Of die locatie in bijlage 1 als "direct aangrenzend aan bestaand bebouwd gebied" is aangemerkt, is niet nagegaan (kaart niet geraadpleegd).
+- **Bijlage 1 (kaart, gelezen 2026-10-05):** de kaart (datum 5-1-2022, schaal 1:80.000) toont per kern (Dalfsen, Lemelerveld, Nieuwleusen, Oudleusen, Hoonhorst) een compacte contour "bestaand bebouwd gebied" met een kleiner "centrumgebied"; al het overige is "buitengebied". Wat "direct aangrenzend" betekent is op de kaart niet gedefinieerd [I]. Het raadsvoorstel De Tuindershof (Ankummer Es, ten noorden van de kern Dalfsen) past de categorie "bebouwd gebied" toe (bindend advies bij **meer dan 11** woningen, 17 woningen): de gemeente rekent die locatie dus tot "in of direct aangrenzend aan bestaand bebouwd gebied". Voor een locatie op afstand van een kern geldt de buitengebiedgrens van meer dan 3 woningen.
 
 **Provinciaal:**
 - nieuwe woningen in de Groene Omgeving vallen onder de Lijst BOPA (Prb 2024 nr. 1348): advies én instemming; zie `provincie_overijssel.md` §4.3;
@@ -344,6 +373,35 @@ Gebaseerd op `provincie_overijssel.md` §4 en de Dalfser stukken; tarieven uit d
 - bestuurlijk: wethouder A. Schuurman (ruimtelijke ordening, volkshuisvesting) en wethouder B. Ramerman (landelijk gebied);
 - het moment is gunstig rond de uitwerking van motie 202604 (Q4 2026) en de nog op te stellen kaders voor nieuwe woonvormen in het PLG [I].
 
+### 3.7 Gebiedskenmerken en overlays (kaartlagen, berekend 2026-10-05)
+**Methode:** WFS-lagen van de Provincie Overijssel (services.geodataoverijssel.nl) doorsneden met de gemeentegrens van Dalfsen (PDOK/CBS gebiedsindelingen 2024, gegeneraliseerd; 166,5 km² land en water). Adrespunten zijn geocodeerd via de PDOK-Locatieserver.
+**Let op:** de nieuwe provinciale **landbouwgebied-typologie** (art. 4.123, sinds 1-7-2026) staat niet in deze WFS. Als benadering voor "landbouwgebied met gebiedsspecifieke opgaven" is de **voormalige zone Ondernemen met Natuur en Water (ONW)** gebruikt; die vormt volgens `provincie_overijssel.md` §1.4 "grotendeels" dat type. Het is dus een indicatie, geen vaststelling.
+
+| Laag | Oppervlak binnen Dalfsen | Aandeel van de gemeente |
+|---|---|---|
+| Voormalige ONW-zone (proxy gebiedsspecifiek landbouwgebied) | 9,2 km² | 5,5% |
+| Natuurnetwerk Nederland (NNN) | 28,6 km² | 17,2% |
+| Natura 2000 | 0 km² (Vecht- en Beneden-Reggegebied op 7 m, Uiterwaarden Zwarte Water en Vecht op 41 m van de grens) | 0% |
+| Grondwaterbeschermingsgebied | 3,3 km² | 2,0% |
+| Waterwingebied | 0,4 km² | 0,2% |
+| Essen (provinciale laag) | 14,9 km² | 9,0% |
+| Archeologische essen | 14,6 km² | 8,7% |
+| Landgoederen (vlakken) | 32,7 km² | 19,6% |
+
+[I] Voor het agrarische buitengebied buiten ONW, NNN en landgoederen ligt de generieke typologie ("landbouwgebied met generieke opgaven en kansen") het meest voor de hand. Dat is nog te toetsen op de definitieve provinciale kaartlaag.
+
+**Ligging van de projectlocaties** (afstand tot de rand van de laag, in meters; "binnen" = in de laag):
+
+| Locatie | Essen | Landgoed | NNN / ONW | Grondwaterbescherming | Natura 2000 |
+|---|---|---|---|---|---|
+| De Tuindershof (Ankummer Es 11) | binnen | 95 | 758 | 1.136 | 3.859 |
+| Vosserburen (Vossersteeg 74) | 325 | binnen | 527 | 630 | 3.013 |
+| Het Engelland (Engellandweg) | 346 | 523 | 1.563 / 1.906 | 2.475 | 5.000 |
+| Waterinkweg, Lemelerveld | 1.831 | 2.585 | 1.246 | 10.936 | 2.615 |
+| Oosterdalfsen Noord | binnen | 300 | 761 | 3.860 | 6.649 |
+
+Controle: de plantoelichting Het Engelland noemt 4,5 km tot het dichtstbijzijnde stikstofgevoelige Natura 2000-gebied en NNN op 1,5 km; de zoekresultaten over de Waterinkweg melden 2,5 km tot het Vecht- en Beneden-Reggegebied. Beide komen overeen met de berekening (planrand tegenover adrespunt).
+
 ---
 
 ## 4. VAB-beleid (vrijkomende agrarische bebouwing)
@@ -401,18 +459,30 @@ Gebaseerd op `provincie_overijssel.md` §4 en de Dalfser stukken; tarieven uit d
 |---|---|---|---|
 | Oosterdalfsen Noord | ca. 398 (Woonupdate 006; dalfsen.nl: "bijna 400", 394; VHP-restant per 1-1-2024: 338) | Bestemmingsplan raad 23-9-2024, onherroepelijk; bouwrijp tot Q1 2027; eerste kaveluitgifte juni 2026 | 5 CPO-kavels (eerste ronde) |
 | Waterinkweg, Lemelerveld | ca. 204-210 (raad 16-3-2026: herstelbesluit voor 206) | Bouwrijp november 2026; kaveluitgifte mei 2026 | 12 CPO-starterswoningen |
-| Het Engelland / Vosserlanden | ca. 100 (op termijn ca. 600) | Verkoop tweede helft 2026, bouw medio 2027 | Niet gevonden |
+| Het Engelland (= Dalfsen-Noord, ca. 35 ha; eerste deelplan Vosserlanden) | ca. 100 in Vosserlanden; op termijn ca. 600 (raadsvoorstel 2023: ca. 566) | Wijzigingsbesluit 3-2-2025; Vosserlanden: stedenbouwkundig plan raad 24-11-2025, verkoop tweede helft 2026, bouw medio 2027 (de in 2023 genoemde uitgifte "in 2033" is daarmee ingehaald) | Niet gevonden |
 | De Koele II, Hoonhorst | 83 (VHP) | Bouwrijp mei 2026 | 10 CPO rug-aan-rugwoningen |
 | Westerbouwlanden-Noord, Nieuwleusen | 165 (VHP) | Laatste 24 kavels uitgegeven (10 starters, 7 senioren, 7 doorstromers) | Pijlriet 10; Gele Lis 9 |
 | Palthelanden, Nieuwleusen | ca. 600 (2026-2035) [Z] | Netcongestie [Z] | Niet gevonden |
-| Dalfsen-Noord | >500 [Z] | Uitgifte vanaf ca. 2033 [Z] | Niet gevonden |
 
-- **Plancapaciteit (VHP bijlage II, peildatum 1-1-2024):**
+
+- **Plancapaciteit (VHP bijlage II, peildatum 1-1-2024; bevestigd in de Woondeal-actualisatie 2025: 1.039 woningen sleutelprojecten):**
   - 1.118 woningen totaal, waarvan 783 met realisatie vóór 2030 (buitengebied: 60 resp. 40; De Tuinders 15; Vossersteeg 74/De Ruimte 12);
   - opgave 900 t/m 2030, streven naar 130% plancapaciteit;
   - een actuelere telling is niet gevonden.
 
-> **Tegenstrijdige bevinding (sleutelprojecten Woondeal).** Het VHP (oktober 2024) noemt vier Dalfser sleutelprojecten met 840-880 woningen (Dalfsen Centrum 80, Nieuwleusen Centrum 250, Oosterdalfsen Noord 340, Waterinkweg 170-210; peildatum 2021). `provincie_overijssel.md` §1.5 noemt 5 sleutelprojecten met 1.039 woningen, gerealiseerd 479 (Q1 2022-Q4 2024) en een doorkijk 2031-2035 van 1.155. Vermoedelijk is het provinciebestand de herijkte stand (eind 2024/2025) [I]. Controleer Bijlage 1 van de Woondeal (https://overijsselsewoonaanpak.nl/media/xhadtdva/20250325_524100_woondeal-west-overijssel-digitaal-toegankelijk.pdf).
+> **Opgeloste tegenstrijdigheid (sleutelprojecten Woondeal).** Bijlage 1 van de Actualisatie Woondeal West-Overijssel (20-3-2025; gelezen 2026-10-05) noemt voor Dalfsen:
+>
+> | Sleutelproject | Woondeal 2022 | 2024-2030 (na actualisatie) | Doorkijk na 2030 |
+> |---|---|---|---|
+> | Nieuwleusen Centrum | bestaand 250 | 250 | 35 |
+> | Oosterdalfsen Noord | bestaand 340 | 400 | 70 |
+> | Lemelerveld Waterinkweg | bestaand 170 | 206 | 50 |
+> | Hoonhorst De Koele II | nieuw | 83 | - |
+> | Dalfsen Het Engelland | nieuw | 100 | 400 |
+> | Nieuwleusen Palthelanden | nieuw (niet meegeteld: volledig na 2030) | - | 600 |
+> | **Totaal** | 760 | **1.039** | **1.155** |
+>
+> Het VHP (oktober 2024) telde nog vier projecten met 840-880 woningen (inclusief "Dalfsen Centrum 80", peildatum 2021) en is dus gebaseerd op de Woondeal 2022. Het provinciebestand (§1.5) volgt de actualisatie. De gemeente stemde in met de Woondeal 2022 op 21-12-2022; het college besloot over de Actualisatie op 1-4-2025 en de raad nam er op 19-5-2025 kennis van (raadsmemo). Het VHP is volgens dat memo op 2-12-2024 door de raad vastgesteld.
 
 - **Bouwtempo:**
   - 2023: 129 woningen; 2024: 138; 2025: 167 (incl. COA, voorlopig) — Woonupdate 006, bron CBS;
@@ -439,7 +509,7 @@ Gebaseerd op `provincie_overijssel.md` §4 en de Dalfser stukken; tarieven uit d
 | 7 | **CPO rug-aan-rugwoningen De Koele II, Hoonhorst** (10; groep gevormd, "goed begeleid ... door enkele betrokken Hoonhorsters en adviesbureau USHI") | 2025-2026 | Woonupdate 006 | Kleine kern; lokale betrokkenheid |
 | 8 | **Netcongestie** vertraagt nieuwbouw | 2026 | §5 | Hoog: ook een CPO heeft een aansluiting nodig |
 | 9 | **Vennenbergweg 10:** raad wijkt af van de buitengebiedregels; melkvee naar biologische akkerbouw | 15-9-2025 | https://www.dalfsennet.nl/nieuws/520107/terugblik-op-de-raadsvergadering-van-15-september-2025.html | Matig: maatwerk bij stikstof- en landschapswinst |
-| 10 | **9e Verzamelplan Buitengebied:** kleine "agrarisch naar wonen"-wijzigingen [Z] | Commissie 19-5-2025 [Z]; begin 2025 nog in ontwerp (Gmb 2025-74695) | https://ris.dalfsen.nl/Vergaderingen/Raadscommissie/2025/19-mei/19:30/9e-Verzamelplan-Buitengebied/4-2-2-9e-Verzamelplan-Buitengebied-Toelichting.pdf (niet gelezen) | Laag-matig |
+| 10 | **9e Verzamelplan Buitengebied:** verzameling van afzonderlijke projectafwijkingsbesluiten, herzieningen en wijzigingsplannen (o.a. een schuurwoning aan de Koelmansstraat 73) | Commissie 19-5-2025; vastgesteld, ter inzage 18-6 t/m 30-7-2025 (Gmb 2025, 259478) | https://ris.dalfsen.nl/Vergaderingen/Raadscommissie/2025/19-mei/19:30/9e-Verzamelplan-Buitengebied/4-2-2-9e-Verzamelplan-Buitengebied-Toelichting.pdf (globaal doorzocht) | Laag-matig: individuele woningen per erf |
 | 11 | **Tijdelijke woningen en pré-mantelzorg op eigen erf** (beleidsregels college 4-11-2025) | November 2025 | CVDR746498 | Laag-matig |
 | 12 | **Stikstofbrief** (Dalfsen, Hardenberg, Ommen, Staphorst, Zwartewaterland) aan minister Van Essen; boerenprotest 10-8-2026; raadsdebat op verzoek van PRO Dalfsen; wethouder Ramerman | Augustus-september 2026 | https://www.vechtdalcentraal.nl/2026/09/raad-dalfsen-staat-inhoudelijk-achter-te-snel-verstuurde-stikstofbrief/ | Context: sterk agrarisch bestuurlijk klimaat |
 | 13 | **Permanent wonen in recreatiewoningen** (Rosengaardeweg legalisering; onderzoek Hessum/Wildbaan) | Raad 6-10-2025; coalitieakkoord | §2.4 | Route via bestaande bebouwing |
@@ -452,7 +522,29 @@ Gebaseerd op `provincie_overijssel.md` §4 en de Dalfser stukken; tarieven uit d
   - (c) een beleidsklimaat dat landbouw in het noorden beschermt en tegelijk (motie 202604, PLG) maatwerk op vrijkomende erven wil uitwerken.
 - Een provinciale zienswijze of onthouden instemming over Dalfser plannen is niet gevonden (E4). Bij De Tuindershof stemde de provincie in overleg in met de KGO-balans.
 
-> **Opgeloste tegenstrijdigheid (De Tuindershof).** Concept: 19 (raadscommissie 2023) versus 17 (raad 2026). Het raadsvoorstel 2026 noemt 17 woningen; het VHP (peildatum 1-1-2024) telde 15. Het plan is in de uitwerking gewijzigd; 17 is de actuele stand.
+> **Opgeloste tegenstrijdigheid (De Tuindershof).** Aantal woningen: 19 (zoeksamenvatting raadscommissie 2023) versus 17 (raad 2026). De KGO-notitie van 14-2-2023 telt 18 woningen (15 op het erf Stel, 2 Van Keulen, 1 Jansen); het raadsvoorstel 2026 telt 17 (11 daarvan in twee schuurwoningen); het VHP (peildatum 1-1-2024) telde 15. Het plan is tussen 2023 en 2026 gewijzigd; 17 is de actuele stand.
+
+**Toelichting De Tuindershof** (KGO-onderbouwing 14-2-2023, Bureau voor Planvorming Advies; ruimtelijke onderbouwing; raadsvoorstel nr. 2064):
+- **Ontstaan:** de eigenaar van tuinderij Stel (Ankummer Es 11) stopte; er was geen bedrijfsopvolging. Het eerste plan was sloop van de opstallen en 5 vrijstaande woningen. De gemeente vroeg de overige ondernemers (Van Keulen, Jansen) mee te doen en het landschap in één keer te herstellen, en vroeg op het erf Stel meer en kleinere eenheden voor starters en senioren (15 in plaats van 5).
+- **Rekensom (raadsvoorstel):** kassen tellen voor 60% mee in plaats van 20% (vanwege de asbesthoudende kit en dus hogere sloopkosten); 1.000 m² sloop per woonvolume; resultaat 8 woonvolumes van 750 m³ (Stel 4,5; Van Keulen ruim 2,5; Jansen krap 1). De 17 woningen komen daarmee overeen met dit totaal doordat 11 kleinere woningen in twee "schuurwoningen" zijn ondergebracht. De kleinere eenheden brengen minder op; die maatschappelijke meerwaarde telt mee in de KGO-balans.
+- **Investering (KGO-notitie 2023, excl. btw):** sloop kassen Stel € 103.750; sloop kassen Van Keulen en Jansen € 60.450; afwaardering grondwaarde € 182.044; beplanting € 25.000*; aanleg wegen en paden € 75.000; onderhoud wegen en paden 10 jaar € 25.000*; realisatie circulaire kas (bedrag niet ingevuld); onderhoud circulaire kas 10 jaar € 12.500* (*schatting). Opgeteld € 483.744, ongeveer € 28.500 per woning bij 17 woningen [I: eigen optelling].
+- **Maatschappelijke bijdrage:** ommetjes en opengesteld groen (ook buiten het plangebied), educatie, streekwinkel en kas; de initiatiefnemer wil Dalfsenaren en doorstromers uit sociale huur voorrang geven bij verkoop.
+- **Procedure en toetsing:**
+  - buitenplanse omgevingsplanactiviteit (art. 5.1 lid 1 onder a Ow), met bindend raadsadvies bij de aanvraag (17 > 11);
+  - de provincie is "in overleg" betrokken en haar opmerkingen over de openheid van de es zijn verwerkt;
+  - de ladder is volgens de ruimtelijke onderbouwing niet van toepassing: het plan "voorziet niet in het toestaan van extra bebouwingsmogelijkheden" (verplaatsing/vermindering van bebouwing, "Ruimte voor ruimte");
+  - milieu: stikstof (AERIUS), flora en fauna, bodem, archeologie; een spuitvrije zone van 50 m volgens jurisprudentie bij gevoelige functies naast agrarische percelen;
+  - straatnaambesluit "De Tuindershof" 15-7-2026 (Gmb 2026, 337369).
+- **Plek in het landschap:** essenlandschap in het deelgebied Variatie rond de Vecht; kassen "op een es" zijn volgens de huidige kaders niet meer mogelijk; sloop herstelt een deel van de openheid van de es.
+
+**Toelichting Vosserburen** (Gemeenteblad):
+- Vossersteeg 74, aanvraag "het realiseren van 13 transformatiewoningen" (zaak Z/24/712762), ingekomen 29-12-2023 (Gmb 2024, 11999).
+- **Route:** omgevingsvergunning in de uitgebreide procedure met een verklaring van geen bedenkingen van de raad. Ontwerpbesluit 6 weken ter inzage vanaf 30-10-2024 (Gmb 2024, 454253). Besluit van het college 20-12-2024, ter inzage 27-12-2024 t/m 6-2-2025, beroep bij de Rechtbank Overijssel (Gmb 2024, 541698). Plan-ID NL.IMRO.0148.OmBVosserstg74en76-vs01.
+- **Doorlooptijd:** ongeveer 12 maanden tussen aanvraag en besluit. De duur van 20 jaar (tijdelijkheid) volgt uit nieuwsberichten, niet uit de publicatie.
+- De locatie stond al in de VHP-plancapaciteit (Vossersteeg 74, De Ruimte: 12 woningen).
+- In 2026 is blijkens Gemeenteblad-titels het milieudeel/de IPPC-vergunning (varkenshouderij) ingetrokken (Gmb 2026, 144738, 181677 en 290248) [I: betreft dit erf; de titels zijn afgekapt].
+
+**Regionaal vergelijkingsvoorbeeld (niet Dalfsen):** het ontwerp Volkshuisvestingsprogramma Overijssel noemt **BuitenDelen in Lettele** (gemeente Deventer) als CPO-project op een voormalig agrarisch erf, met biobased woningbouw, collectieve voorzieningen en landschapsbeheer; "door gebruik te maken van verruimde provinciale en gemeentelijke kaders" een praktijkvoorbeeld voor "moderne rood-voor-rood ontwikkelingen" (zie `provincie_overijssel.md` §2.4 en §5). Het aantal woningen en de procedure zijn niet onderzocht; geschikt voor het Deventer-rapport.
 
 ---
 
@@ -492,7 +584,7 @@ Collectieve of CPO-initiatieven op agrarische grond of VAB-erven: niet gevonden.
   - maximaal 30% duurder.
   - Aandeel sociale huur 17% (1-1-2024). Corporaties: Woonstichting VechtHorst (grootste), Vechtdal Wonen, Habion.
   - **Let op:** € 303.750 / € 405.000 (concept) zijn de geïndexeerde grenzen 2025 [I].
-- **Prestatieafspraken** Wonen Dalfsen 2025: https://www.vechtdalwonen.nl/media/1720/prestatieafspraken-wonen-dalfsen-2025.pdf (niet gelezen).
+- **Prestatieafspraken** Wonen Dalfsen 2025 (gelezen 2026-10-05; https://www.vechtdalwonen.nl/media/1720/prestatieafspraken-wonen-dalfsen-2025.pdf): de corporaties willen tot 2030 297 sociale huurwoningen toevoegen; de nieuwbouwopgave komt uit de Woondeal West-Overijssel; de corporaties constateren dat de realisatie van nieuwbouw onder druk staat. CPO, VAB en het buitengebied komen er niet in voor (tekstzoektocht).
 - **Overig:** Nadere eisen voor inwoning (CVDR659198), Beleidsregels Woningsplitsing Inwoonsituaties 2021 (CVDR656505), Verordening Starterslening 2020 (CVDR644440). Uitgifte in de nieuwbouw met zelfbewoningsplicht/vervreemdingsbeperking (VHP-maatregel 3; CPO-brochure 7 jaar).
 - **Landelijk:** de Wet versterking regie volkshuisvesting verplicht een huisvestingsverordening met urgentieregeling (volgens `provincie_overijssel.md` §5 uiterlijk 1-1-2028) [I: Dalfsen krijgt er dan een].
 
@@ -504,7 +596,8 @@ Collectieve of CPO-initiatieven op agrarische grond of VAB-erven: niet gevonden.
   - de CPO-pagina en kavelpagina's per kern (https://www.dalfsen.nl/collectief-particulier-opdrachtgeverschap-qena, https://www.dalfsen.nl/bouwkavels-dalfsen, -lemelerveld, enz.);
   - de gemeente houdt "geen belangstellendenregistratie" bij; uitgifterondes worden op de projectpagina's aangekondigd;
   - CPO-begeleiding door bouwadviesbureau USHI (Waterinkweg, De Koele II).
-- **Algemeen:** 0529 48 83 88; Raadhuisstraat 1, 7721 AX Dalfsen (dalfsen.nl). Het in het concept genoemde 14 0529 is niet bevestigd.
+- **Algemeen:** 0529 48 83 88; Raadhuisstraat 1, 7721 AX Dalfsen (dalfsen.nl). Het nummer 14 0529 staat in Gemeenteblad-publicaties van de gemeente (2024-2025) en is daarmee bevestigd.
+- **Vooroverleg:** product "Vooroverleg initiatiefnemer" (conceptverzoek via het Omgevingsloket; € 371,10; sinds 1-1-2026 verrekend met de leges van een omgevingsvergunning of omgevingsplanwijziging die binnen 12 maanden volgt): https://www.dalfsen.nl/vooroverleg-initiatiefnemer.
 - **Wonen:** beleidsadviseur wonen Gerwin van Lohuizen (contactpersoon Woonupdate 006 en auteur VHP; g.vanlohuizen@dalfsen.nl).
 - **Buitengebied:**
   - Regisseur Landelijk Gebied (PLG; naam niet gevonden);
@@ -521,19 +614,19 @@ Collectieve of CPO-initiatieven op agrarische grond of VAB-erven: niet gevonden.
 
 ### 10.1 Verkiezingsuitslag 18 maart 2026
 - Coalitieakkoord (voorwoord, gelezen): "Gemeentebelangen groeide van acht naar tien zetels. Het CDA bleef stabiel met zes zetels."
-- Overige zetels [Z] (dalfsen.nl-pagina met de definitieve uitslag gaf op 2026-10-04 een 404). Opkomst 66,34%; uitslag vastgesteld 26-3-2026 [Z]. Analyse: https://www.dalfsennet.nl/nieuws/538748/analyse-hoe-heeft-dalfsen-gestemd-en-hoe-gemeentebelangen-weer-wint.html.
+- Zetels en opkomst gelezen in Vechtdal Centraal (definitieve uitslag, maart 2026; https://www.vechtdalcentraal.nl/2026/03/definitieve-uitslag-gemeenteraadsverkiezingen-gemeente-dalfsen/): opkomst 66,34% (2022: 62,7%). Analyse DalfsenNet (https://www.dalfsennet.nl/nieuws/538748/analyse-hoe-heeft-dalfsen-gestemd-en-hoe-gemeentebelangen-weer-wint.html): Gemeentebelangen 37,7% van de stemmen; Stand Organisatie Dalfsen (Rob Mud) nieuw met 1 zetel; ChristenUnie verloor een zetel; de raad groeide met twee zetels. De uitslagpagina op dalfsen.nl gaf op 2026-10-04 een 404.
 
 | Partij | Zetels (van 23) |
 |---|---|
 | Gemeentebelangen | 10 (was 8) |
 | CDA | 6 |
-| ChristenUnie | 2 [Z] |
-| GroenLinks-PvdA / PRO Dalfsen | 2 [Z] |
-| D66 | 1 [Z] |
-| VVD | 1 [Z] |
-| Stand Organisatie Dalfsen | 1 [Z] |
+| ChristenUnie | 2 (was 3) |
+| GroenLinks-PvdA | 2 |
+| D66 | 1 |
+| VVD | 1 |
+| Stand Organisatie Dalfsen | 1 (nieuw) |
 
-> **Toelichting PRO Dalfsen.** Leander Broere ondertekende motie 202604 (maart 2026) namens de PvdA. In september 2026 trad hij op als "PRO-fractievoorzitter" (Vechtdal Centraal). PRO Dalfsen is dus vermoedelijk de lijst/fractie die voortkomt uit de PvdA [I]. Stand Organisatie Dalfsen (Rob Mud) zit in de raad (stikstofdebat september 2026). De RTV Focus-kop "CDA stormt naar de winst in Dalfsen" [Z] past niet bij deze uitslag en is waarschijnlijk van een andere verkiezing; niet opgelost.
+> **Toelichting PRO Dalfsen.** Leander Broere staat in raadsstukken (besluitenlijsten) als fractievoorzitter van GroenLinks-PvdA en ondertekende motie 202604 (maart 2026) namens de PvdA; in september 2026 noemt Vechtdal Centraal hem "PRO-fractievoorzitter". PRO Dalfsen is daarmee vermoedelijk de nieuwe naam van de fractie GroenLinks-PvdA [I]; in geen gelezen bron bevestigd. De RTV Focus-kop "CDA stormt naar de winst in Dalfsen" [Z] past niet bij deze uitslag en is waarschijnlijk van een andere verkiezing; niet opgelost.
 
 ### 10.2 Coalitievorming 2026: afgerond; geen lopende formatie op 2026-10-04
 - Informateur Wout Wagenmans [Z]; advies 14-4-2026 om Gemeentebelangen + CDA te verkennen [Z].
@@ -611,7 +704,7 @@ Grondzaken wordt in de portefeuillelijst niet apart genoemd (vermoedelijk onder 
   - **Vraag naar kern:** "De vraag is het grootst in Dalfsen, gevolgd door Nieuwleusen"; grote kernbinding.
   - **Bijzondere woonvormen:** het VHP ziet "kansen voor bijzondere woonvormen gericht op doelgroepen waar de grootste vraag zit; starters en senioren", en bij een deel "een vraag voor meer collectieve woonvormen", bijvoorbeeld hofjes, ook met een "mix van jong en oud".
   - **Speerpunten per kern** (bijlage I): jongeren vragen "meer ruimte voor CPO-initiatieven"; in Hoonhorst worden hofjeswoningen genoemd; in Dalfsen een "generatiehof (hofjeswoningen voor meerdere generaties)"; in het buitengebied vragen bewoners meer woonruimte via splitsing of transformatie van boerderijen.
-- **Corporaties:** willen tot 2030 297 sociale huurwoningen toevoegen [Z].
+- **Corporaties:** willen tot 2030 297 sociale huurwoningen toevoegen (prestatieafspraken 2025, gelezen).
 - **Woningbehoefteonderzoek:** nieuw onderzoek in voorbereiding (Woonupdate 006).
 - **Voorrang:** het coalitieakkoord benut "eventuele voorrangsmogelijkheden". De CPO-pagina meldt dat de gemeente bij CPO geen onderscheid naar herkomst mag maken.
 - **Aansluiting CPO [I]:**
@@ -673,31 +766,31 @@ Grondzaken wordt in de portefeuillelijst niet apart genoemd (vermoedelijk onder 
 
 ## 13. Lacunes en aanbevelingen voor vervolgonderzoek
 
-**Stand van de leesopdrachten uit het concept (2026-10-02 → 2026-10-04):**
+**Stand van de leesopdrachten uit het concept (2026-10-02 → 2026-10-05):**
 
 | # | Opdracht (concept) | Status | Resultaat |
 |---|---|---|---|
 | 1 | CVDR674315 (/1 en /2) lezen: sloopmaten, maximaal drie woningen, KGO-formule, wijzigingsdatum versie /2 | **Afgehandeld** | Sloopmaten en drie-woningengrens bevestigd (§3.1); KGO is maatwerk zonder formule; vaststelling raad 28-2-2022, in werking 16-3-2022; versie /2 vanaf 10-6-2022 wijzigt alleen het begrip "bestaand erf" |
-| 2 | PLG (CVDR760428/1; uitgever; Nota van zienswijzen; provinciale reactie) | **Afgehandeld** | Uitgever Dalfsen (gm0148); college 10-2-2026, geldend 15-4-2026; raad nam kennis 16-3-2026 met moties; geen zienswijze van de provincie herkenbaar; Sloop voor kansen- en VAB-beleid wordt los van het PLG herzien |
-| 3 | VHP 2025-2029, Woonupdates 004-006, raadsmemo Actualisatie Woondeal | **Grotendeels** | VHP en Woonupdate 006 gelezen. Woonupdates 004-005 en de raadsmemo Woondeal niet gelezen (RIS-adres van de raadsmemo gaf 404 op secure-dalfsen) |
+| 2 | PLG (CVDR760428/1; uitgever; Nota van zienswijzen; provinciale reactie) | **Afgehandeld** | Uitgever Dalfsen (gm0148); college 10-2-2026, geldend 15-4-2026; raad nam kennis 16-3-2026 met moties; geen zienswijze van de provincie herkenbaar; Sloop voor kansen en VAB worden los van het PLG herzien |
+| 3 | VHP 2025-2029, Woonupdates 004-006, raadsmemo Actualisatie Woondeal | **Afgehandeld, op Woonupdate 004 na** | VHP, Woonupdates 005 en 006 en het raadsmemo Actualisatie Woondeal gelezen; de sleutelprojecten zijn met Bijlage 1 van de Woondeal opgelost (§5). Woonupdate 004 (en eerder) niet gelezen; inhoudelijk ingehaald door 005 en 006 |
 | 4 | Coalitieakkoord 2026-2030 en bericht 1-10-2026 | **Afgehandeld** | Geen CPO/zelfbouw/erven in het akkoord; 800 woningen; sociale erfpacht; PLG uitvoeren. Bericht: raad 30-9-2026, overschot naar reserve, versnelling voorbereiding woningbouwlocaties |
-| 5 | De Tuindershof (KGO-onderbouwing 2023; raad 16-3-2026) en 5e Verzamelplan | **Grotendeels** | Raadsvoorstel nr. 2064 gelezen (§6). De KGO-bijlage zelf (7-3) is alleen in samenvatting via het raadsvoorstel gebruikt; 5e Verzamelplan niet gelezen |
-| 6 | Het Engelland (Gmb 2025-74695; zienswijzen); Notitie Inbreidingslocaties; Notitie adviesrecht | **Afgehandeld** | Het Engelland gelezen (geen zienswijzenoverzicht in het besluit). Inbreidingsnotitie gelezen. Adviesrecht: Dalfser regeling CVDR705154 gelezen; concept-nummer CVDR727504 is Montfoort |
-| 7 | Nota Grondbeleid 2026, grondprijzenbrief 2026, Legesverordening 2026; Gemeenteblad/Provinciaal blad (E4) | **Grotendeels** | Nota, grondprijzen (webpagina) en leges gelezen. De grondprijzenbrief-PDF zelf is niet geopend. E4: geen provinciale zienswijze of aanwijzing gevonden; het Provinciaal blad is niet systematisch doorzocht |
-| 8 | Vosserburen: vergunning en juridische route | **Deels** | Vergunning voor 20 jaar ("tijdelijk"), pilot. Het vergunningsbesluit (Gemeenteblad) en de financiering zijn niet gelezen |
-| 9 | Kaartlagen (landbouwgebied-typologie, NNN, Natura 2000, grondwaterbescherming, Dashboard/Planmonitor Wonen) | **Open** | Niet geraadpleegd (interactieve kaartviewers). Wel bevestigd: drinkwaterbeschermingsgebied en Vitens-winning in de Marshoek/Vechterweerd (PLG §5.4.3.1.3 en §5.6.15) |
-| 10 | Niet onderzocht: D1/D2/F1; Hoonhorst/Ankum/Oudleusen; De Stentor/RTV Oost; Platform31, Het Kan Wel; coalitiecrisis na 8-9-2026; Engbertsdijksvenen; landgoederen Vilsteren/'t Laer | **Deels** | Kernen Hoonhorst/Oudleusen via Woonupdate 006 (§7); coalitiecheck tot 30-9-2026 (stabiel); landgoederen volgens Beleidsregels 2022: Rechteren, Den Berg, Den Aalshorst, Mataram, De Horte, Hessum (Vilsteren/'t Laer niet genoemd). D1/F1, regionale media en Engbertsdijksvenen open |
-| 11 | Vragen aan de gemeente | **Open (alleen bij de gemeente te beantwoorden)** | Zie hieronder; aangevuld |
+| 5 | De Tuindershof (KGO-onderbouwing; raad 16-3-2026) en 5e Verzamelplan | **Afgehandeld** | KGO-onderbouwing, ruimtelijke onderbouwing en raadsvoorstel gelezen (§6). Het "5e Verzamelplan" bleek niet de relevante stap: het 9e Verzamelplan en de Erfwonen-beeldkwaliteitsplannen zijn via Gemeenteblad en gemeentesite gelezen (§3.1); de toelichting (70 p.) is alleen globaal doorzocht (verzameling van afzonderlijke projecten) |
+| 6 | Het Engelland (Gmb 2025-74695; zienswijzen); Notitie Inbreidingslocaties; Notitie adviesrecht | **Afgehandeld** | Het Engelland, Inbreidingsnotitie en de Dalfser regeling adviesrecht (CVDR705154) gelezen, inclusief de kaart in Bijlage 1; het concept-nummer CVDR727504 is Montfoort. Een zienswijzenoverzicht bij Het Engelland is niet gevonden |
+| 7 | Nota Grondbeleid 2026, grondprijzenbrief 2026, Legesverordening 2026; Gemeenteblad/Provinciaal blad (E4) | **Afgehandeld** | Nota, grondprijzen (webpagina) en leges gelezen; de grondprijzenbrief-PDF is niet apart geopend (webpagina geeft dezelfde tabel). E4: Provinciaal blad systematisch doorzocht, geen zienswijze of onthouden instemming gevonden |
+| 8 | Vosserburen: vergunning en juridische route | **Afgehandeld voor de route** | Omgevingsvergunning in de uitgebreide procedure met verklaring van geen bedenkingen; ca. 12 maanden (§6). De vergunningtekst en de precieze voorwaarden (20 jaar) zijn niet gelezen |
+| 9 | Kaartlagen | **Grotendeels** | Provinciale WFS-lagen (voormalige ONW-zone, NNN, Natura 2000, grondwaterbescherming, waterwin, essen, landgoederen) doorsneden met de gemeentegrens (§3.7); Natura 2000 ligt niet in Dalfsen. De nieuwe landbouwgebied-typologie (art. 4.123) is niet publiek via de WFS; Dashboard/Planmonitor Wonen niet bevraagd |
+| 10 | Niet onderzocht: D1/D2/F1; Hoonhorst/Ankum/Oudleusen; De Stentor/RTV Oost; Platform31/Het Kan Wel; coalitiecrisis; Engbertsdijksvenen; Vilsteren/'t Laer | **Afgehandeld, met rest** | D1: regeling 4.39 open, geen Dalfser aanvraag; F1: Adviespool, Ondersteuningsteam, Betaalbaar wonen (zie Bijlage A). Hoonhorst en Oudleusen via Woonupdate 006 en de CPO-lijst (§7). Coalitiestabiliteit gecontroleerd tot 30-9-2026. Landgoed Vilsteren ligt in Ommen (PDOK-adresregister), niet in Dalfsen; Engbertsdijksvenen is niet als woonplaats in Dalfsen terug te vinden. Niet gedaan: De Stentor (betaalmuur), RTV Oost, Platform31, Het Kan Wel, 't Laer |
+| 11 | Vragen aan de gemeente | **Open** | Alleen bij de gemeente te beantwoorden; zie hieronder |
 
 **Resterende lacunes en aanbevelingen:**
 1. **Uitwerking motie 202604 en PLG-kaders** voor "alternatieve woonvormen op vrijkomende erven" en Rood-voor-Groen/Blauw. Volgen in het RIS rond Q4 2026; ook het eerste jaarlijkse Uitvoeringsplan PLG.
 2. **Herziening Beleidsregels 2022** (Sloop voor kansen/VAB) en het nieuwe omgevingsplan voor het buitengebied: planning opvragen.
-3. **Bijlage 1 bij CVDR705154** (kaart "bestaand bebouwd gebied" versus buitengebied): bepaalt of 4-11 woningen bij een kern zonder raadsadvies kunnen.
-4. **De Tuindershof, KGO-bijlage** (RIS 16-3-2026, agendapunt 7, bijlage 7-3): als rekenvoorbeeld voor een eigen KGO-onderbouwing integraal lezen.
-5. **Kaartlagen** (ruimtelijkeplannen.overijssel.nl; omgevingswet.overheid.nl/regels-op-de-kaart): landbouwgebied-typologie, NNN, Natura 2000 (tegenstrijdigheid C3), grondwaterbescherming; Dashboard/Planmonitor Wonen.
-6. **Woondeal-tellingen** (Bijlage 1 Woondeal; raadsmemo 15-4-2025) om de tegenstrijdigheid 4 versus 5 sleutelprojecten op te lossen.
-7. **"Boerenerf wonen"** (begrip in de Legesverordening 2026): navragen of hiervoor een aparte regeling of werkwijze bestaat.
-8. **Prestatieafspraken 2025**, Woonupdates 004-005 en het nieuwe Woningbehoefteonderzoek.
+3. **Definitieve provinciale kaartlaag landbouwgebied-typologie** (art. 4.123) voor de kandidaatlocatie; de proxy in §3.7 is alleen indicatief.
+4. **Provinciaal Volkshuisvestingsprogramma Overijssel:** vaststelling door GS afwachten en kaders voor VAB en collectieve woonvormen toetsen.
+5. **"Boerenerf wonen"** (begrip in de Legesverordening 2026): navragen of hiervoor een aparte regeling of werkwijze bestaat.
+6. **Vergunningtekst Vosserburen** (voorwaarden, 20 jaar, tijdelijkheid) en de toelichting van het 9e Verzamelplan.
+7. **Woonupdate 004**, het Woningbehoefteonderzoek (in voorbereiding) en de grondprijzenbrief 2027 (december 2026).
+8. **BuitenDelen (Lettele, Deventer)** als CPO op voormalig agrarisch erf: onderzoeken in het Deventer-rapport.
 9. **Vragen aan de gemeente:**
    - kan een bestaand burgercollectief (geen individuele loting) via VHP-maatregel 8 een plek krijgen op een uitleglocatie of in een projectmatige uitgifte;
    - is een CPO van 10-12 woningen op een vrijkomend erf in Variatie rond de Vecht of Parels in het landschap bespreekbaar via KGO;
@@ -714,27 +807,27 @@ Status: gevonden / deels gevonden / niet gevonden / niet van toepassing / tegens
 | # | Status | Bevinding | Bron | Waar anders te vinden |
 |---|---|---|---|---|
 | A1 | Deels gevonden | "Overige kern" (art. 4.4). Bestuurlijk meningsverschil juli 2025: de provincie wil groei rond de kern Dalfsen (DSS), de gemeente in Nieuwleusen/Lemelerveld. Het VHP noemt Lemelerveld en Nieuwleusen voor de regionale vraag. Erkenning als "bijzonder groeiprofiel" niet gevonden | https://dalfsencity.nl/2025/07/28/woningbouw-dalfsen-gemeente-en-provincie-verdeeld-over-aanpak/ ; VHP §1.4 | Verstedelijkingsstrategie Regio Zwolle; Omgevingsvisie Overijssel |
-| A2 | Deels gevonden / tegenstrijdig | Woondeal West-Overijssel: het VHP noemt 4 sleutelprojecten met 840-880 woningen (peildatum 2021); het provinciebestand 5 met 1.039. Plancapaciteit 783 vóór 2030 en 1.118 totaal (VHP bijlage II, 1-1-2024), waarvan buitengebied 40/60; streven 130%. Gerealiseerd 2023: 129, 2024: 138, 2025: 167. Telling CPO/VAB apart, 80/20-regel en post kleine kernen: niet gevonden | VHP; Woonupdate 006 | Woondeal Bijlage 1; raadsmemo Actualisatie Woondeal (15-4-2025); Dashboard Wonen |
+| A2 | Deels gevonden | Woondeal West-Overijssel (Actualisatie 20-3-2025, Bijlage 1): 479 gerealiseerd (Q1 2022-Q4 2024); 5 sleutelprojecten 2024-2030 = 1.039 woningen (Nieuwleusen Centrum 250, Oosterdalfsen Noord 400, Waterinkweg 206, De Koele II 83, Het Engelland 100); doorkijk 2031-2035: 1.155 (o.a. Palthelanden 600, Het Engelland 400). Raad nam kennis op 19-5-2025 (college 1-4-2025); Woondeal 2022 ondertekend 21-12-2022. Plancapaciteit 783 vóór 2030 (VHP bijlage II, 1-1-2024; buitengebied 40), streven 130%. Gerealiseerd 2023: 129, 2024: 138, 2025: 167. Telling CPO/VAB apart, 80/20-regel en post kleine kernen: niet gevonden | Woondeal Bijlage 1; raadsmemo Actualisatie Woondeal; VHP; Woonupdate 006 | Dashboard Wonen (GIS-portaal Overijssel); beleidsadviseur wonen |
 | A3 | Gevonden | VHP (prijspeil 2024): ≥30% sociale huur (< € 879), ≥15% sociale koop (< € 292.500), ≥25% € 292.500-€ 390.000 of huur € 879-€ 1.157, ≤30% duur; jaarlijkse indexatie. Geen aparte regel voor kleine kernen of kleine projecten; "in elk nieuwbouwproject" in principe 30% sociale huur, met alternatieven (elders in de kern, middenhuur/betaalbare koop) | VHP §3 | Prestatieafspraken 2025 |
 | A4 | Deels gevonden | VHP 2025-2029 aanwezig (raad december 2024); bouwt op het wetsvoorstel Regie; geen ladderverwijzing; wijst geen buitengebiedlocaties aan maar telt 60 woningen in het buitengebied mee; herijking niet aangekondigd (wel nieuw Woningbehoefteonderzoek) | VHP; Woonupdate 006 | RIS 2026-2027 |
 | A5 | Gevonden | ≥220 nultredenwoningen t/m 2030; geclusterde woonvormen gedefinieerd (landelijk ≥12, platteland lager); hofjes en generatiehofjes in de speerpunten per kern. Gebruik van *Langer zelfstandig wonen*: niet gevonden. Huisvestingsverordening: geen | VHP §5, bijlagen I en III | regelen.overijssel.nl |
 | B1 | Gevonden | Eigen kader: Beleidsregels Ontwikkelen met Kwaliteit 2022 (CVDR674315): Sloop voor kansen (sloop-m² per woning; tabel §3.1), VAB-hergebruik en KGO (maatwerk, "de gemeente is regisseur"). PLG (CVDR760428) begrenst per deelgebied | CVDR674315/2; CVDR760428/1 | — |
 | B2 | Gevonden | Sloop voor kansen: maximaal 3 extra woningen per erf, één keer per erf. 10-12 woningen alleen via KGO-maatwerk of VAB-hergebruik (geen vast maximum); precedent De Tuindershof (17) | CVDR674315 §4.5; raadsvoorstel nr. 2064 | — |
 | B3 | Deels gevonden | Geen herziening van de Beleidsregels 2022 na Omgevingsvisie 2026/Actualisatie 2026; de gemeente kondigt herziening "los van het PLG" aan. Nieuw omgevingsplan buitengebied in voorbereiding (planning niet gevonden). Of het PLG de provinciale landbouwgebied-typologie hanteert: het PLG gebruikt eigen termen (agrarisch focusgebied) | Nota van zienswijzen PLG; nieuwleusen.com 1-7-2025 | RIS; Gemeenteblad |
-| B4 | Deels gevonden | De Dalfser regeling adviesrecht onderscheidt "in of direct aangrenzend aan bestaand bebouwd gebied" (bijlage 1-kaart) en buitengebied; kaart niet geraadpleegd. Het Engelland wordt als uitleg behandeld met motivering van art. 4.4/4.5/4.11; De Tuindershof (nabij de kern) via KGO | CVDR705154; Gmb 2025-74695; raadsvoorstel nr. 2064 | Bijlage 1 CVDR705154; Omgevingsvisie 1.0 |
+| B4 | Gevonden (kaart) | Bijlage 1 bij de regeling adviesrecht (kaart 5-1-2022): compacte contouren "bestaand bebouwd gebied" per kern, rest buitengebied; "direct aangrenzend" niet gedefinieerd. De Tuindershof (Ankummer Es) wordt als "bebouwd gebied" behandeld (17 > 11). Het Engelland is een omgevingsplanwijziging met motivering van art. 4.4, 4.5 en 4.11; het PLG behandelt kern-randzones. Notitie Inbreidingslocaties 2023 is relevant voor locaties in de kern | CVDR705154 Bijlage 1; raadsvoorstel nr. 2064; Gmb 2025, 74695 | — |
 | B5 | Gevonden | Kwaliteitsinvestering = sloop, asbestsanering, erfinrichting en landschap, beeldkwaliteit; afdwinging via ontwikkelingsovereenkomst (boete- en kettingbeding, instandhouding 10 jaar, uitvoeringstermijn) en voorwaardelijke verplichting. Maatschappelijke meerwaarde (kleinere, goedkopere woningen) kan meetellen in de KGO-balans (De Tuindershof) | CVDR674315 §7 en Bijlage 1; raadsvoorstel nr. 2064 | — |
-| C1 | Niet gevonden (provinciaal); gevonden (gemeentelijk) | Provinciale typologie (kaartlaag art. 4.123) niet geraadpleegd. Gemeentelijk: Weids Platteland en het heideontginningsdeel van Landelijk Lemelerveld zijn "agrarisch focusgebied" | PLG §5.2.3, §5.5.3, §5.6.3 | https://ruimtelijkeplannen.overijssel.nl ; https://omgevingswet.overheid.nl/regels-op-de-kaart |
+| C1 | Deels gevonden | Provinciale typologie (kaartlaag art. 4.123) niet in de publieke WFS. Proxy: de voormalige ONW-zone beslaat 5,5% van Dalfsen (§3.7); de projectlocaties liggen 0,5-1,9 km van die zone [I: waarschijnlijk "generiek landbouwgebied"]. Gemeentelijk: Weids Platteland en het heideontginningsdeel van Landelijk Lemelerveld zijn "agrarisch focusgebied" (PLG) | WFS Provincie Overijssel; PLG §5.2.3, §5.6.3 | https://omgevingswet.overheid.nl/regels-op-de-kaart (definitieve kaartlaag) |
 | C2 | Niet gevonden | Geen expliciete toepassing van art. 4.124 lid 4. Het PLG verplaatst Sloop voor kansen-rechten naar kernen en andere deelgebieden (sluit aan bij lid 4 sub b [I]); geen provinciale zienswijze op het PLG herkenbaar. Gebiedsvisie Ten Noorden van de Vecht (ZSDZ) als samenhangende gebiedsvisie genoemd in het PLG | PLG §5.2.2.4; Nota van zienswijzen | Provincie (accounthouder) |
-| C3 | Deels gevonden / tegenstrijdig | Natura 2000 Vecht- en Beneden-Reggegebied deels in Dalfsen volgens het gebiedendocument [Z]; tegenstrijdig met het plan-MER Buitengebied 2013 [Z]. Vechtdal is een gebied in de Gebiedsgerichte Aanpak Stikstof [Z]. Drinkwater: winning en drinkwaterbeschermingsgebied Vitens in de Marshoek/Vechterweerd; verkenning Salland Diep (provincie bevoegd gezag). Nationaal Landschap: niet van toepassing. Essenlandschap: provinciale catalogus gebiedskenmerken toegepast (Het Engelland, De Tuindershof) | PLG §5.4.3.1.3, §5.6.15; Nota van zienswijzen; Gmb 2025-74695 | Kaartlagen Omgevingsverordening |
+| C3 | Gevonden (kaartlaag) | Natura 2000 ligt **niet** in Dalfsen (Vecht- en Beneden-Reggegebied op 7 m, Uiterwaarden Zwarte Water en Vecht op 41 m van de gegeneraliseerde gemeentegrens); bij de projectlocaties 2,6-6,6 km. NNN 17,2%, landgoederen 19,6%, essen 9,0%, grondwaterbeschermingsgebied 2,0% (§3.7). Het eerdere "deels in Dalfsen" ([Z]) is niet bevestigd. Stikstof: Vechtdal is een gebied van de Gebiedsgerichte Aanpak Stikstof [Z]. Drinkwater: Vitens-winning en beschermingsgebied in de Marshoek/Vechterweerd (PLG); Salland Diep (provincie bevoegd): voorkeursvariant en MER eind 2027, vergunningaanvragen eind 2028 volgens Vitens. Nationaal Landschap: niet van toepassing. Raatakkers/karrensporen: niet onderzocht | Kaartberekening (WFS + PDOK); PLG §5.4.3.1.3, §5.6.15; https://www.vitens.nl/over-water/projecten/overijssel/salland | geoportaal Overijssel |
 | C4 | Deels gevonden | Netcongestie (dalfsen.nl; Woonupdate 006; coalitieakkoord: "Planningen voor nieuwbouwwijken staan onder druk"). Coalitieakkoord: "Het waterleidingnet loopt tegen fysieke beperking aan", onderzoek naar drinkwaterbesparend bouwen. Redeneerlijn- of energieparagraaf voor kleine projecten: niet gevonden | https://www.dalfsen.nl/netcongestie ; coalitieakkoord | Toelichtingen omgevingsplanwijzigingen |
-| D1 | Niet gevonden | Geen deelname aan een intergemeentelijk VAB-/erftransformatieprogramma of aanvraag subsidie 4.39 gevonden | — | regelen.overijssel.nl; vab@overijssel.nl |
+| D1 | Niet gevonden | Regeling 4.39 staat op 2026-10-05 nog open ("tot het budget bereikt is"; alleen voor gemeenten; adviesgesprek via vab@overijssel.nl; maximaal 2× per gemeente). Geen aanvraag of deelname van Dalfsen gevonden; Dalfsen heeft een eigen PLG en een Regisseur Landelijk Gebied. Het PLG noemt provinciale gebiedsprocessen "Toekomst voor ons Platteland" in Parels in het landschap en Landelijk Lemelerveld | https://regelen.overijssel.nl/Producten_en_diensten/Subsidies/Wonen_en_leefbaarheid/Beleid_transformatie_agrarische_bebouwing_erven_en_gronden | vab@overijssel.nl; besluitenlijst B&W |
 | D2 | Deels gevonden | Ervenconsulent Het Oversticht verplicht in het proces ("keukentafelgesprek"); Regisseur Landelijk Gebied aangesteld; erfcoach-budget € 7.500 per jaar [Z] | CVDR674315 Bijlage 2; dalfsen.nl/programma-landelijk-gebied | erfcoachoverijssel.nl |
 | D3 | Gevonden | VAB-hergebruik voor wonen (splitsing karakteristieke boerderij of stallen in "meerdere woningen"), wonen en zorg, tijdelijke woningen 2025, woningsplitsing 2021. Precedenten: De Tuindershof (17), Vosserburen (13, pilot). VHP wil verruiming voor nieuwe woonvormen op vrijkomende erven onderzoeken; motie 202604 | CVDR674315 §5; VHP §4; RIS 16-3-2026 | — |
-| E1 | Deels gevonden | Omgevingstafel als intake/principeroute in de gemeentelijke leges (eenvoudig/complex). Omgevingstafel IJsselland (pilot in Dalfsen) [Z]. Provincie betrokken bij De Tuindershof (KGO-overleg) en bij de locatiekeuze (DSS). Accounthouder niet openbaar | Legesverordening 2026; raadsvoorstel nr. 2064 | Gemeentelijke RO-afdeling; Overijssel Loket |
+| E1 | Deels gevonden | Omgevingstafel IJsselland (OD IJsselland): de gemeente bepaalt of een initiatief aan de regionale tafel komt; ketenpartners zijn GGD, waterschap, veiligheidsregio, omgevingsdienst, provincie en RWS; de initiatiefnemer "kan en mag aanwezig zijn", omwonenden niet. Dalfsen heeft daarnaast gemeentelijke "Omgevingstafels" als principeverzoek-route met leges (eenvoudig € 577,40; complex € 1.233,10). Provincie betrokken bij De Tuindershof (KGO-overleg, openheid van de es) en bij de locatiekeuze (DSS). Accounthouder: niet openbaar | https://www.odijsselland.nl/over/omgevingstafel ; Legesverordening 2026 ; raadsvoorstel nr. 2064 | Gemeentelijke RO-afdeling; Overijssel Loket |
 | E2 | Gevonden | Grote locaties via wijziging van het omgevingsplan (Het Engelland). Buitengebied: principeverzoek, dan BOPA (grote BOPA) met bindend raadsadvies bij meer dan 3 woningen; participatie verplicht bij elke nieuwe woning. Provinciale termijnen uit het provinciebestand | CVDR705154; Legesverordening 2026 | — |
 | E3 | Niet gevonden | Geen toepassing van de provinciale Uitzonderingenlijst (≤11 woningen in een kern >1.000 inwoners) gevonden. De Dalfser raadsadviesgrens bij kernen (>11) is in 2023 "gelijkgesteld met de ladder" | CVDR705154 toelichting | Gemeentelijke RO; CBS-kerncijfers |
-| E4 | Niet gevonden | Geen provinciale zienswijze, aanwijzing of onthouden instemming 2023-2026 gevonden; geen provinciale zienswijze op het PLG herkenbaar. Provincie wel betrokken (De Tuindershof, DSS) | Nota van zienswijzen PLG; raadsvoorstel nr. 2064 | Provinciaal blad |
-| F1 | Niet gevonden | Gebruik van provinciale regelingen (Betaalbaar wonen in kleine steden en dorpen, Flexpools, Langer zelfstandig wonen, Vitaliteit dorpen, Woonplatforms) niet gevonden. VHP: de gemeente wil het aanjaagteam en de flexpool uit de Woondeal gebruiken. Vosserburen: landelijke Stimuleringsregeling Flex- en Transformatiewonen en Leader [Z] | VHP §2 | regelen.overijssel.nl; Woonupdates |
+| E4 | Niet gevonden | Provinciaal blad 2023-2026 doorzocht via de SRU-zoekservice (169 publicaties noemen Dalfsen): uitsluitend vergunningen, natuur, wegen en generieke provinciale besluiten; geen zienswijze, aanwijzing of onthouden instemming over Dalfser woningbouw of omgevingsplannen. Geen provinciale zienswijze op het PLG herkenbaar. Provincie wel betrokken (De Tuindershof, DSS) | repository.overheid.nl/sru (officielepublicaties, Prb) ; Nota van zienswijzen PLG | Provincie (accounthouder); zienswijzenoverzicht Het Engelland (niet gevonden) |
+| F1 | Deels gevonden | Dalfsen gebruikte de **Adviespool Provincie Overijssel** (expertise-inhuur tot € 50.000, maximaal 2×) voor Het Engelland en zoekt een tweede mogelijkheid; vroeg het **Ondersteuningsteam Wonen Zorg** om steun voor Palthelanden en Het Engelland; onderzoekt de regeling **Betaalbaar wonen in kleine steden en dorpen** (nog geen aanvraag); noemt het rijksfonds NFBK en de rijksrealisatiestimulans. Flexpool en Langer zelfstandig wonen: niet gevonden. Vosserburen: Stimuleringsregeling Flex- en Transformatiewonen en Leader [Z] | Woonupdate 005 (8-7-2025); https://www.vechtdalcentraal.nl/2026/07/dertien-sociale-woningen-in-het-buitengebied-dertien-keer-een-thuis/ | regelen.overijssel.nl |
 
 ### Houdbaarheid (herverifiëren vóór elke onderzoeksbatch)
 Zie §6.1 van `provincie_overijssel.md`. Voor Dalfsen zijn vooral relevant:
@@ -746,3 +839,6 @@ Zie §6.1 van `provincie_overijssel.md`. Voor Dalfsen zijn vooral relevant:
 - **Leges en grondprijzen** worden jaarlijks herzien (Legesverordening en grondprijzenbrief 2027 rond december 2026).
 - **Provinciale Statenverkiezingen maart 2027:** kan het provinciale beleid verschuiven.
 - **Kavelaanbod en projectstanden** dateren van september/oktober 2026 en verouderen snel.
+- **Provinciaal Volkshuisvestingsprogramma Overijssel 2026-2035:** ontwerp ter inzage 16-7 t/m 26-8-2026; vaststelling door GS niet gevonden. Kan de Overijsselse kaders voor VAB, collectieve woonvormen en kleine kernen verduidelijken.
+- **Landbouwgebied-typologie:** definitieve provinciale kaartlaag (art. 4.123) en toepassing op de Dalfser locaties.
+- **Subsidie 4.39** staat op 2026-10-05 nog open voor aanvragen.
