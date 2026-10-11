@@ -17,6 +17,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen |
 | `gemeente_olst-wijhe.md` | Beleidsinventarisatie gemeente Olst-Wijhe (geverifieerd aan brondocumenten, 2026-10-05) |
 | `gemeente_deventer.md` | Stub gemeente Deventer (BuitenDelen); volledig onderzoek volgt |
+| `gemeente_ommen.md` | Beleidsinventarisatie gemeente Ommen (vier deelonderzoeken samengevoegd, 2026-10-11) |
 
 ## Doel van prompt.md
 
