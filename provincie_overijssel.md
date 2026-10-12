@@ -33,6 +33,8 @@
 
 **Correcties 2026-10-05 (verificatieronde gemeente Olst-Wijhe):** (1) §2.3: CVDR305226 is van Tubbergen (vervallen 16-02-2022), niet van Olst-Wijhe. (2) §4.2 en §6.3: werkende URL Omgevingstafel IJsselland is https://www.odijsselland.nl/over/omgevingstafel. (3) §4.2: de initiatiefnemer "kan en mag" bij de Omgevingstafel aanwezig zijn. Bijvangst voor §6.1: het ontwerp-Volkshuisvestingsprogramma Overijssel (GS 30-6-2026; Prb 2026, 11834; ter inzage 16-7 t/m 26-8-2026, Prb 2026, 11967) bestaat en noemt transformatie van vrijkomende agrarische bebouwing "mits deze in de directe nabijheid van een dorp ligt" en collectieve woonvormen als passend; het subsidieplafond 4.39 voor 2025-2026 is € 1.640.250 (Prb 2025, 17002).
 
+**Correcties 2026-10-12 (verificatieronde gemeente Zwartewaterland):** (1) §1.5: de kolommen voor Zwartewaterland (244 / 3 / 559 / 77) zijn gecontroleerd tegen de Woondeal West-Overijssel (Tabel 1 en Bijlage 1): gerealiseerd Q1 2022-Q4 2024 / aantal sleutelprojecten / woningen in sleutelprojecten 2024-2030 / doorkijk 2031-2035; de drie sleutelprojecten zijn Genemuiden Tag-West, Genemuiden Binnenveld 1 en Hasselt Om de Weede (alle aan een kern). (2) §6.2 punt 2: in Zwartewaterland is het gebiedsspecifieke landbouwgebied (art. 4.123) met 64,6% van de gemeente (77,2% van de landbouwgrond) ruim twintig keer zo groot als de voormalige ONW-zone (2,8%); het generieke type beslaat 6,0% (526 ha, vooral bij Genemuiden). Zie `gemeente_zwartewaterland.md`.
+
 ---
 
 ## 1. Provinciale omgevingsvisie en Groene Omgeving
