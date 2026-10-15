@@ -20,6 +20,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `gemeente_deventer.md` | Beleidsinventarisatie gemeente Deventer (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-14; vervangt de stub van 2026-10-05) |
 | `gemeente_ommen.md` | Beleidsinventarisatie gemeente Ommen (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-11; vervangt het concept van 2026-10-02) |
 | `gemeente_zwartewaterland.md` | Beleidsinventarisatie gemeente Zwartewaterland (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-12) |
+| `gemeente_raalte.md` | Beleidsinventarisatie gemeente Raalte (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15) |
 
 ## Doel van prompt.md
 
