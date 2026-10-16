@@ -22,6 +22,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `gemeente_zwartewaterland.md` | Beleidsinventarisatie gemeente Zwartewaterland (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-12) |
 | `gemeente_raalte.md` | Beleidsinventarisatie gemeente Raalte (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15) |
 | `gemeente_hardenberg.md` | Beleidsinventarisatie gemeente Hardenberg (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15) |
+| `gemeente_hattem.md` | Beleidsinventarisatie gemeente Hattem (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16) |
 | `gemeente_hellendoorn.md` | Beleidsinventarisatie gemeente Hellendoorn (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16) |
 
 ## Doel van prompt.md
