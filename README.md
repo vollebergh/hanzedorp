@@ -11,6 +11,8 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | Bestand | Inhoud |
 |---|---|
 | `prompt.md` | Masterprompt voor het onderzoek |
+| `tools/ori.py` | Client voor de Open Besluitvorming-API (raadsstukken doorzoeken; zie `tools/README.md`) |
+| `tools/README.md` | Gebruiksaanwijzing van de tools |
 | `provincie_overijssel.md` | Provinciaal referentiekader Overijssel |
 | `provincie_gelderland.md` | Provinciaal referentiekader Gelderland |
 | `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle |
