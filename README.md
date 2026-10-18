@@ -13,19 +13,19 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `prompt.md` | Masterprompt voor het onderzoek |
 | `tools/ori.py` | Client voor de Open Besluitvorming-API (raadsstukken doorzoeken; zie `tools/README.md`) |
 | `tools/README.md` | Gebruiksaanwijzing van de tools |
-| `provincie_overijssel.md` | Provinciaal referentiekader Overijssel |
+| `provincie_overijssel.md` | Provinciaal referentiekader Overijssel (actualisatie 2026-10-18 via RIS) |
 | `provincie_gelderland.md` | Provinciaal referentiekader Gelderland |
-| `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle |
+| `gemeente_zwolle.md` | Beleidsinventarisatie gemeente Zwolle (actualisatie 2026-10-18 via RIS) |
 | `gemeente_kampen.md` | Beleidsinventarisatie gemeente Kampen (geverifieerd aan brondocumenten, 2026-10-05; raadsstukken in het RIS niet toegankelijk) |
 | `gemeente_dalfsen.md` | Beleidsinventarisatie gemeente Dalfsen |
 | `gemeente_olst-wijhe.md` | Beleidsinventarisatie gemeente Olst-Wijhe (geverifieerd aan brondocumenten, 2026-10-05) |
-| `gemeente_deventer.md` | Beleidsinventarisatie gemeente Deventer (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-14; vervangt de stub van 2026-10-05) |
-| `gemeente_ommen.md` | Beleidsinventarisatie gemeente Ommen (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-11; vervangt het concept van 2026-10-02) |
-| `gemeente_zwartewaterland.md` | Beleidsinventarisatie gemeente Zwartewaterland (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-12) |
-| `gemeente_raalte.md` | Beleidsinventarisatie gemeente Raalte (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15) |
-| `gemeente_hardenberg.md` | Beleidsinventarisatie gemeente Hardenberg (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15) |
-| `gemeente_hattem.md` | Beleidsinventarisatie gemeente Hattem (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16) |
-| `gemeente_hellendoorn.md` | Beleidsinventarisatie gemeente Hellendoorn (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16) |
+| `gemeente_deventer.md` | Beleidsinventarisatie gemeente Deventer (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-14; vervangt de stub van 2026-10-05; actualisatie 2026-10-18 via RIS) |
+| `gemeente_ommen.md` | Beleidsinventarisatie gemeente Ommen (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-11; vervangt het concept van 2026-10-02; actualisatie 2026-10-18 via RIS) |
+| `gemeente_zwartewaterland.md` | Beleidsinventarisatie gemeente Zwartewaterland (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-12; actualisatie 2026-10-18 via RIS) |
+| `gemeente_raalte.md` | Beleidsinventarisatie gemeente Raalte (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15; actualisatie 2026-10-18 via RIS) |
+| `gemeente_hardenberg.md` | Beleidsinventarisatie gemeente Hardenberg (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-15; actualisatie 2026-10-18 via RIS) |
+| `gemeente_hattem.md` | Beleidsinventarisatie gemeente Hattem (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16; actualisatie 2026-10-18 via RIS) |
+| `gemeente_hellendoorn.md` | Beleidsinventarisatie gemeente Hellendoorn (vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-16; actualisatie 2026-10-18 via RIS) |
 | `gemeente_voorst.md` | Beleidsinventarisatie gemeente Voorst (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-18; alle onderzoeken op Sonnet 5.5) |
 
 ## Doel van prompt.md
