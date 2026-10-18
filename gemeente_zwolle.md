@@ -195,6 +195,9 @@ VAB-gebruik wordt in Zwolle kennelijk **niet via een losstaande beleidsregel** g
 
 ---
 
+### Actualisatie 2026-10-18: Kleine Veerweg 4a (wijzigingsbesluit TAM-omgevingsplan, RIS e964be9d)
+- Raadsvoorstel (raad 15-12-2025; ontwerp ter inzage 16-9 t/m 27-10-2025, geen zienswijzen): een deel van een agrarisch erf krijgt de functie wonen. De bedrijfswoning stond leeg omdat er geen behoefte meer was aan een bedrijfswoning voor het agrarisch bedrijf; zij mag nu door mensen zonder binding met het bedrijf worden bewoond, het overige deel van het erf blijft agrarisch. Dit is een VAB-precedent met een agrarisch erf en een bestaande woning, geen nieuwbouw van 10-12 woningen. [PRIMAIR, raadsvoorstel]
+
 ## 5. Grondbeleid
 
 ### Grondprijzen
