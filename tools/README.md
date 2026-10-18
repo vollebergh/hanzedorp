@@ -28,6 +28,6 @@ python3 -I tools/ori.py grep voorst '"rood voor groen"'
 - **Snapshot is goedkoop, details zijn duur:** de snapshot (1 eenheid per 1.000 records) levert alleen titels, classificatie en datum; de tekst komt per stuk via `/api/entities/{id}` (1 eenheid). Een volledige gemeente is 10.000+ stukken (uren): filter met `--klasse`, `--naam` of `--sinds`; nieuwste stukken gaan eerst. `harvest` slaat al opgehaalde stukken over en hervat na onderbreking.
 - **Cache:** standaard `~/.cache/hanzedorp-ori/<gemeente>/` (of `--cache` / `$ORI_CACHE`); niets hiervan hoort in de repository.
 - **Onbetrouwbare data:** opgehaalde tekst wordt nooit uitgevoerd. Transcripties (`transcript_kind: asr`) zijn spraakherkenning en onbetrouwbaar; pdf-extractie van tabellen is soms slordig.
-- **Dekking:** collegebesluitenlijsten en collegestukken staan er niet in; niet-gepubliceerde documenten ontbreken; er zijn dubbele en "VERVALLEN"-versies.
+- **Dekking:** collegebesluitenlijsten en collegestukken staan er niet in; **raadsmededelingen (Notubiz-module "mededelingen") ontbreken voor Voorst** (nul treffers op o.a. "Wezeveld"; vastgesteld 2026-10-18), dus zoek die zo nodig rechtstreeks via `api.notubiz.nl`; de raadsbesluitenlijsten staan er wel in (zoek op titel "Besluitenlijst"); niet-gepubliceerde documenten ontbreken; er zijn dubbele en "VERVALLEN"-versies.
 
 Tests (offline): `python3 -I tools/test_ori.py`.
