@@ -398,7 +398,7 @@ Een cohousing- of knarrenhof-initiatief van burgers is niet gevonden.
 - **Plannen:** coalitieakkoord 2026-2030: "Binnen de kaders van de Huisvestingswet stellen wij een huisvestingsverordening op, zodat er meer voorrang kan worden gegeven aan woningzoekenden met aantoonbare binding met onze gemeente." en een "lokale voorrangsregeling [...] bij de toewijzing van woningen en bouwkavels". Er is nog geen ontwerp; het nieuwe uitvoeringsprogramma (CUP) is gepland voor oktober 2026 (Kaderbrief 2027-2030).
 - **Minimum sociale huur:** niet via verordening. Beleid: coalitieakkoord "Nieuwbouw moet voor minimaal 30% uit sociale huur bestaan"; Addendum 30-40-30; streefprogramma woonprogramma 15% sociale huur / 15% goedkope koop / 5% middenhuur / 65% middelduur en duur, in de praktijk ingehaald door het addendum. Amendement A1 bij de visie Lemele (12-3-2026): de verdeling "is van toepassing op het gehele grondgebied van de gemeente Ommen. Per locatie kan de verdeling er anders uitzien".
 - **Lokale binding:** nu via uitgiftecriteria (CPO-regels) en de starterslening (CVDR679031; max. € 30.000 tot de NHG-grens).
-- De Regiewet vraagt een huisvestingsverordening uiterlijk 1-1-2028 [PB, primaire bron Staatsblad].
+- De Regiewet vraagt een huisvestingsverordening uiterlijk 1-1-2028 [PB, primaire bron Staatsblad]. Actualisatie 2026-10-18: de handreiking huisvestingsverordening (VNG, Companen, maart 2026; RIS 16827722, gekoppeld aan de vergadering van 8-4-2026) is een algemene handreiking, niet Ommen-specifiek. Zij beschrijft het verplichte urgentieonderdeel, de regionale verdeling en de mogelijkheid van voorrang voor lokale binding; een Ommense concept is in het RIS niet gevonden.
 
 ---
 
@@ -588,8 +588,8 @@ Bron: https://lokaleregelgeving.overheid.nl/CVDR753504 (2026-10-06).
 | Onderwerp | Reden | Waar te vinden |
 |---|---|---|
 | Ruimtelijke Visie Ommen 2040; uitvoeringsstrategie Woon- en werklocaties | Niet openbaar; besloten commissie 3-4-2025 | Griffie/afdeling Ruimte; CUP (oktober 2026) |
-| Woningbehoefteonderzoek 2024 Ommen | Alleen geciteerd in SV Lemele | Afdeling Ruimte/Wonen; Woonzorgvisie-traject |
-| Grondprijsbrief 2025/2026; Nota Grondbeleid 2012 | Niet gelezen resp. niet gevonden online | ommen.nl/direct-regelen/ondernemen/grondprijzen/; Grondzaken/RIS 2012; herziene nota uiterlijk begroting 2027 |
+| Woningbehoefteonderzoek 2024 Ommen | Alleen geciteerd in SV Lemele; RIS-zoekopdracht op de titel (2026-10-18) levert niets op | Afdeling Ruimte/Wonen; Woonzorgvisie-traject |
+| Grondprijsbrief 2025/2026; Nota Grondbeleid 2012 | Niet gelezen resp. niet gevonden online; RIS-zoekopdracht op 'Grondprijsbrief' (2026-10-18) levert alleen MJP-grondexploitaties 2019–2021 op | ommen.nl/direct-regelen/ondernemen/grondprijzen/; Grondzaken/RIS 2012; herziene nota uiterlijk begroting 2027 |
 | VAB-regel in het moederplan Buitengebied (aantal woningen per erf) | Niet uitgelezen; ruimtelijkeplannen.nl 404, DSO-API met sleutel | omgevingswet.overheid.nl/regels-op-de-kaart; plan NL.IMRO.0175.buiten201200001; afdeling Ruimte |
 | Strategieboek Verstedelijkingsstrategie Regio Zwolle (groeiprofiel Ommen) | PDF gaf geen inhoud | Regio Zwolle |
 | Provinciale accounthouder; 1-op-1-gesprekken; zienswijzennota's bij TAM-plannen | Niet publiek | Gemeente (afdeling Ruimte), Overijssel Loket 038 499 88 99, bijlagen RIS/ruimtelijkeplannen.nl |
