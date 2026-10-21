@@ -29,6 +29,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `gemeente_voorst.md` | Beleidsinventarisatie gemeente Voorst (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-18; alle onderzoeken op Sonnet 5.5) |
 | `gemeente_oldebroek.md` | Beleidsinventarisatie gemeente Oldebroek (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-18; alle onderzoeken op Sonnet 5.5) |
 | `gemeente_nunspeet.md` | Beleidsinventarisatie gemeente Nunspeet (Gelderland; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-19; alle onderzoeken op Sonnet 5.5) |
+| `gemeente_heerde.md` | Beleidsinventarisatie gemeente Heerde (Gelderland, woondealregio Stedendriehoek; buiten de 19 gemeenten van het oorspronkelijke zoekgebied; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-21; alle onderzoeken op Sonnet 5.5) |
 
 ## Doel van prompt.md
 
