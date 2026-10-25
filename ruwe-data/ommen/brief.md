@@ -1,0 +1,17 @@
+# Gedeelde opdracht — onderzoek gemeente OMMEN (provincie Overijssel)
+Project: /home/nick/Claude/Hanzedorp (CPO-onderzoek 10-12 woningen op agrarische grond). Datum: 2026-10-06.
+Lees EERST volledig: /home/nick/Claude/Hanzedorp/prompt.md (regels 1-190: werkwijze, 12 vaste onderwerpen, Bijlage A) en /home/nick/Claude/Hanzedorp/provincie_overijssel.md (Fase 1-kader; gebruik, niet opnieuw onderzoeken).
+Voorbeelden van afgeronde rapporten (diepgang, citaatstijl, markeringen [PB]/[TK]/[INT]/[BER]): gemeente_olst-wijhe.md en gemeente_dalfsen.md. Lees minstens de kop + 1-2 secties.
+Alleen Overijsselse begrippen; Bijlage B (Gelderland) NIET van toepassing.
+Gemeente Ommen: plaatsen o.a. Ommen, Vilsteren, Besthmen, Lemele, Beerze, Hammerbrug, Junne, Arriën, Witharen, Den Ham-grens (Twenterand, niet Ommen!), Dalmsholte; controleer zelf (PDOK-Locatieserver). Ligt in woonregio West-Overijssel (zie provincie_overijssel.md §1.5: Ommen 290 gerealiseerd 2022-2024, 2 sleutelprojecten / 508 woningen).
+
+## Regels (uit prompt.md en eerdere ervaring)
+- Volledigheid, actualiteit en juistheid boven tokenverbruik. Ga na een eerste treffer door naar recentere/aanvullende bronnen.
+- Bij elke bron: URL + raadplegingsdatum. Citeer relevante passages letterlijk (blockquote); grote documenten (>1000 woorden) beschrijven + bronvermelding.
+- Lees brondocumenten ZELF; WebSearch-samenvattingen zijn onbetrouwbaar voor gemeente-attributie. Controleer bij elk CVDR-nummer de organisatie in de kop (treffers blijken vaak van andere gemeenten!). Namen/plaatsnamen kunnen verkeerd zijn: controleer.
+- Wat niet gevonden/verifieerbaar is: expliciet melden + waar het wel te vinden zou zijn (loket/register/afdeling).
+- Onderscheid live bronnen van trainingskennis ([TK]).
+- Tooling-tips: ommen.nl kan 403/certificaatproblemen geven → gebruik curl met browser-UA; bij tussencertificaat ontbreekt: haal via AIA-URL op en gebruik --cacert (verificatie niet uitschakelen). PDF's: pdfplumber (pdftotext ontbreekt). RIS (ommen.bestuurlijkeinformatie.nl / iBabs) kan achter Anubis zitten → claude-in-chrome. CVDR: zoekservice.overheid.nl/sru/Search?x-connection=cvdr&operation=searchRetrieve&version=1.2&query=dcterms.creator=Ommen and dcterms.modified>=2020-01-01 (paginering startRecord). Gemeenteblad/Provinciaal blad: repository.overheid.nl/sru (x-connection=officielepublicaties, dt.creator=Ommen AND cql.textAndIndexes=<term>). Provinciale kaartlagen: WFS services.geodataoverijssel.nl/geoserver/ows (NNN, Natura 2000, grondwater e.d.) + PDOK gemeentegrenzen + Locatieserver, doorsnijden met shapely.
+- Schrijf tussentijds en eindresultaat naar je eigen bestand in /tmp/claude-1000/-home-nick-Claude-Hanzedorp/835c9923-b702-4c3d-931a-b64d86db2f73/scratchpad/ommen/ (extracties in submap raw/). NIET naar de repo schrijven.
+- Eindrapport per deelonderzoek: Markdown, gestructureerd per onderwerp §1-§12 (alleen wat jouw brontype oplevert, maar doorzoek je brontype voor ALLE 12 onderwerpen) + de Bijlage A-controlepunten (A1-F1) die bij jou "primair" zijn, elk met bevinding, status (gevonden/niet gevonden/niet van toepassing/tegenstrijdig), bron+URL+datum. Meld ook zaken die je toevallig vindt voor andere punten. Sluit af met "Tegenstrijdigheden/onzekerheden" en "Niet onderzocht + waarom". Vermeld aan het eind welk model je bent.
+- Je eindbericht aan de hoofdagent: kort (pad naar je rapport + 10 regels kernbevindingen), niet het volledige rapport.
