@@ -66,6 +66,15 @@ Beperkingen die in het verantwoordingsblok moeten terugkomen:
 - De snapshot van een bron kan leeg of onvolledig zijn (de tool valt dan terug op zoeken per maand); controleer de aantallen.
 - Een leeg zoekresultaat is geen bewijs dat iets niet bestaat; zoek met varianten van de term en op titel.
 
+## Ruwe deelonderzoeksdata archiveren (`ruwe-data/`)
+Na afronding van een gemeente gaan de werkbestanden van de deelonderzoeken mee in dezelfde commit als het eindrapport, zodat de bevindingen later kunnen worden nagerekend. Zie `ruwe-data/README.md`.
+- **Locatie:** `ruwe-data/<gemeente>/`, in de hoofdmap van de repository (niet in `archief/`: die map staat in `.gitignore`). Gebruik de kleine letters van de gemeentenaam zoals in `gemeente_<naam>.md` (bijv. `olst-wijhe`). Behoud de structuur van de werkmap, normaal `raw/` met `do1.md` t/m `do4.md`.
+- **Wél opnemen:** de deelrapporten van de subagents, briefings (`BRIEF.md`), voortgangs-/statusbestanden, de scripts (`.py`, `.sh`) waarmee data is opgehaald of berekend, en kleine tabellen (`.csv`, `.tsv`), elk kleiner dan 1 MB.
+- **Niet opnemen:** gedownloade bronnen (PDF, HTML, binaire bestanden), geëxtraheerde brontekst (`*_bronnen/`, `src/`, `cache/`, RIS-documentdumps), logs en lock-/retrybestanden, en alles groter dan 1 MB. Reden: het repository is publiek (auteursrecht, persoonsgegevens in raadsstukken, omvang).
+- **Vóór het committen:** controleer de bestanden op sleutels, tokens en wachtwoorden (ook in gescrapete HTML/CSV, bijv. gesigneerde URL's) en verwijder wat gevonden wordt. Persoonlijke gegevens van de opdrachtgever horen er niet in.
+- **Eindrapport leidend:** de werkbestanden kunnen voorlopige uitspraken bevatten die in het eindrapport zijn gecorrigeerd. Pad-verwijzingen naar scratchpad-mappen in scripts zijn vervallen en mogen blijven staan.
+- **Vermelding:** voeg in het verantwoordingsblok van het gemeenterapport één regel toe met het pad `ruwe-data/<gemeente>/` en wat er bewust niet in zit.
+
 ## Omgang met bronmateriaal
 - Kleine stukken informatie (beleidsregels, raadsbesluiten, relevante passages) mogen integraal in het rapport worden opgenomen.
 - Grote documenten (meer dan 1.000 woorden) worden niet integraal opgenomen maar beschreven en voorzien van een volledige bronvermelding (naam document, datum, URL).
