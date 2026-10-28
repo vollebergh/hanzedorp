@@ -1,6 +1,6 @@
 # Ruwe deelonderzoeksdata per gemeente
 
-Gefilterd archief van de werkbestanden van de deelonderzoeken (stand 2026-10-27), geordend per gemeente. Bedoeld om bevindingen in de eindrapporten (`gemeente_<naam>.md` in de hoofdmap) te kunnen narekenen.
+Gefilterd archief van de werkbestanden van de deelonderzoeken (stand 2026-10-29), geordend per gemeente. Bedoeld om bevindingen in de eindrapporten (`gemeente_<naam>.md` in de hoofdmap) te kunnen narekenen.
 
 ## Wat erin zit
 - Deelrapporten van de subagents (`raw/do1.md` t/m `do4.md`, `deelonderzoek_*.md`), briefings (`BRIEF.md`, `BRIEFING.md`), voortgangs- en statusbestanden.
