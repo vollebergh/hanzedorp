@@ -1,0 +1,344 @@
+# Gemeente Epe — CPO-naslagwerk (provincie Gelderland)
+
+> **Status: samengevoegd rapport met toetsronde (2026-11-01).** Vier gelijktijdige deelonderzoeken (bestuursinformatie, provinciaal-lokale toepassing met geodata, nieuws 2024-2026, juridische registers) zijn samengevoegd en gededupliceerd; de hoofdagent heeft kerngegevens en tegenstrijdigheden tegen de brontekst gecontroleerd (zie "Verantwoording"). Het rapport beantwoordt de twaalf vaste onderwerpen, de twee kernvragen en de controlepunten van Bijlage B voor gemeente Epe. Datums zijn dd-mm-jjjj; bedragen zijn, tenzij anders vermeld, zoals in de bron.
+
+## Verantwoording
+- **Raadplegingsdatum:** 2026-10-31 en 2026-11-01 (deelonderzoeken) en 2026-11-01 (samenvoeging en toetsing); bronnen met eigen datum waar die afwijkt.
+- **Provincie en gebruikt provinciebestand:** Gelderland, [`provincie_gelderland.md`](provincie_gelderland.md) (stand 2026-10-02, met correcties van 2026-10-16/18). Het Gelderse regime is leidend. **Bijlage B is van toepassing; Bijlage A (Overijssel) niet.** Gelderse begrippen gebruikt (GNN, Groene ontwikkelingszone, kernkwaliteiten, regionale woonafspraken art. 5.64, landschapsregel art. 5.33, Matrix, BOPA-gevallenlijst Prb 2024 nr. 3109); geen Overijsselse begrippen overgenomen.
+- **Primair model + effort:** synthese en eindrapport: Claude Sonnet 5.5 (`claude-sonnet-5-5`); het reasoning-effort is niet expliciet ingesteld of bekend.
+- **Deelonderzoeken (Fase 2):**
+
+| Deelonderzoek | Brontype | Model | Opmerking |
+|---|---|---|---|
+| 1 | Gemeentelijke bestuursinformatie (epe.nl, CVDR, Open Besluitvorming `epe`) | Claude Sonnet 5.5 | Gefilterde `harvest` (titelregex + klasse, sinds 2019/2022; 2.315 stukken in volledige tekst) + FTS-`grep` + `search`/`get`. |
+| 2 | Provinciaal-lokale toepassing + geodata | Claude Sonnet 5.5 | Gelderse WFS (POVE-lagen), PDOK (gemeentegrens, Natura 2000, BRP 2025, BAG, CBS-kernen), 61 ORI-zoekopdrachten (631 stukken), Provinciaal Blad-SRU. |
+| 3 | Nieuws en actualiteit 2024-2026 | Claude Sonnet 5.5 | Gemeentelijke persberichten, Vaassen Actief, 1 Omroep Gelderland-artikel; smalle mediadekking (zie Zoekdekking). |
+| 4 | Juridische en officiële registers | Claude Sonnet 5.5 | CVDR-SRU (558 werken/721 records), Gemeenteblad/Prb-SRU, Rechtspraak, Open Besluitvorming-kruiscontrole. |
+
+Alle deelonderzoeken en de synthese zijn op Sonnet uitgevoerd; er is geen Opus of andere modelfamilie gebruikt (conform `prompt.md`, Werkwijze punt 4). **Alle vier de deelonderzoeken werden op 31-10-2026 door de sessielimiet onderbroken** (HTTP 429, resets 21:10 en 02:10) en zijn daarna via dezelfde agent-id hervat; de melding dat de scratchpad niet meer beschikbaar was klopte niet (bestanden stonden er nog). Er is geen data verloren.
+- **Zoekdekking:**
+  - *Open Besluitvorming* (bronsleutel `epe`, Notubiz; snapshot 15.203 entiteiten t/m 15-10-2026): gefilterde `harvest` + `index` + `grep` (zie boven) aangevuld met `search`/`get`. **Collegestukken en B&W-besluitenlijsten staan niet in de bron** (volgens epe.nl/collegebesluiten op de gemeentewebsite); documenten zonder tekst ontbreken (o.a. amendement-pdf's 14382536 en 14368639). Een leeg zoekresultaat is geen bewijs dat iets niet bestaat.
+  - *Gemeentewebsite* epe.nl (curl met browser-user-agent, geen 403); *CVDR* (alle Epe-records, uitgever per nummer gecontroleerd); *Gemeenteblad/Provinciaal Blad* via SRU; *Rechtspraak* (Open Data); *geodata* zoals beschreven bij deelonderzoek 2.
+  - *Nieuwsmedia:* epe.nl-persberichten en Vaassen Actief goed leesbaar; Nieuwsblad Schaapskooi gaf 403; De Stentor paywall; epesnieuws.nl onbereikbaar; veluwepost.nl is een drukkerij-site, geen nieuwsmedium; van Omroep Gelderland is één artikel gelezen (coalitie, 25-06-2026) en de rest alleen als zoekresultaat gezien; de Chrome-extensie viel uit. De nieuwsdekking is dus **smal**.
+  - *Niet bereikbaar of niet gelezen:* planviewer/DSO-viewer (JavaScript); toelichting plan GU01 (404); Omgevingsvisie "Natuurlijk goed leven" (9-12-2021) alleen via ontwerpversie in het RIS; Verordening fysieke leefomgeving; Tarieventabel 2027; inhoud van de amendementen bij de Woonagenda; Epe-zienswijze op de ontwerp-Omgevingsvisie; Landschapsontwikkelingsplan 2010; ECLI:NL:RVS:2026:608 alleen overwegingen 1-4; treffers op "stikstofruimte" niet inhoudelijk gelezen.
+- **Zelf gecontroleerd door de hoofdagent in de brontekst (2026-11-01):** (1) de **sloopstaffel** (<1.000 m² 0 woningen; 1.000-2.000: 1; 2.000-3.000: 2; >3.000: 3, "naast de bestaande bedrijfswoning"), de 750 m³-grens, de landschapsanalyse/erfinrichtingsplan en de zin "Wonen in het buitengebied is maatwerk. Dit is geen volkshuisvestelijke opgave…" staan woordelijk in de CVDR-tekst van de Woonagenda (CVDR723659); (2) de **35% sociale huur "vanaf 10 woningen"** staat woordelijk in de Woonagenda (twee passages); (3) de **CPO-zin** ("denk ook zeker aan CPO-projecten en hofjeswoningen") staat in de paragraaf over de **kern Epe**, niet bij Emst zoals deelonderzoek 4 meldde (gecorrigeerd); (4) de **volgordelijst transportcapaciteit** (CSV van deelonderzoek 4) telt 51 posities, waarvan 48 woningbouwprojecten met samen **1.900 woningen** (zelf nagerekend); in die lijst staat Zuukerenk op 600 en 't Slath op 150 (zie Tegenstrijdigheden); (5) college en burgemeester Tom Horn zijn op epe.nl bevestigd.
+- **Betrouwbaarheidsmarkering:** **[PRIMAIR]** = brontekst zelf gelezen; **[PB]** = uit `provincie_gelderland.md`; **[TK]** = trainingskennis; **[INT]** = interpretatie van de samensteller; **[BER]** = eigen berekening; **[WF]** = via zoekresultaat/samenvatting, lager betrouwbaar. RIS-stukken staan met de `entityId` zonder prefix `document:notubiz:gemeente:epe:` (bijv. `17461850`).
+- **Ruwe data:** `ruwe-data/epe/` bevat de deelrapporten, de briefing, scripts en kleine tabellen (o.a. de CVDR-lijst en de volgordelijst). Bewust niet opgenomen: gedownloade bronnen (PDF/HTML), geëxtraheerde brontekst en ORI-cache, logs en bestanden > 1 MB (publiek repository).
+- **Fouten in eerdere aannames (gecorrigeerd):** (a) lacune L2.6 in het provinciebestand ("Epe: eigen functieveranderingsbeleid niet gevonden") is **opgelost**: het kader staat in de Woonagenda 2024-2028 (Bijlage II); (b) Epe heeft **geen** Noord-Veluwe-huisvestingsverordening maar een eigen (regio Epe-Hattem-Heerde); (c) het provinciebestand noemt 1.843 als "plancapaciteit (100%)"; in de Epe-bron is 1.843 de oude woondeal-opgave 2022-2030 (bruto); (d) Wapenveld ligt in Heerde; Gortel, Niersen en Oosterhuizen zijn buurtschappen, geen kernen; (e) het Afwegingskader Woonzorg is vastgesteld op 18-05-2021 en in werking sinds 18-03-2022 (provinciebestand: "2022"); (f) 't Slath/Zuukerenk zijn 700 à 750 woningen, niet 600 (zie Tegenstrijdigheden).
+- **Gemeente en kernen:** gemeentegebied 15.737,2 ha (Kadaster GM0232) [BER]; bebouwde kom/kernen volgens het gemeentelijk beleid: **Epe, Vaassen, Emst en Oene**; CBS-bevolkingskernen 2021 omvatten daarnaast o.a. Wissel, Zuuk en De Vossenberg. Landbouwgrond (BRP 2025, excl. natuurterrein/overig) 4.674,5 ha [BER] (provinciebestand: 4.679 ha).
+- **Woonregio en grensoverschrijding:** woondealregio **Stedendriehoek** (Gelderse deel: Apeldoorn, Brummen, Epe, Heerde, Lochem, Voorst, Zutphen; Deventer in Overijssel draagt bij aan de verstedelijkingsstrategie maar telt voor de aantallen mee in West-Overijssel). De WFS-laag woningbouwregio's rekent 99,96% van Epe tot de Stedendriehoek (4,5 ha Noord-Veluwe is een grensartefact) [BER]. Epe is geen lid van Regio Zwolle. Het Gelderse regime is leidend; het Overijsselse beleid van Deventer geldt alleen als context.
+- **Doelstelling:** inschatten of een CPO van 10-12 woningen op agrarische grond in Epe haalbaar is, met welke route en welke drempels.
+
+---
+
+## Samenvatting (voor de snelle lezer)
+1. **Epe heeft geen CPO-beleid, geen zelfbouwloket en geen CPO-/zelfbouwkavelaanbod.** CPO komt alleen zijdelings voor: in de Woonagenda 2024-2028 voor de kern Epe ("denk ook zeker aan CPO-projecten en hofjeswoningen"), in de Woonagenda 2019-2023 (jongeren) en in een woningbehoefteonderzoek Oene 2020 (16,5% belangstelling). Het enige gevonden CPO-experiment, de kleuterschool Ibbeltje (2021), leverde geen enkele gegadigde op en is in 2022 aan ontwikkelaars aangeboden. De gemeente geeft "in principe geen grond uit". Coalitieakkoord 2026-2030 en Volkshuisvestingsprogramma (nog niet vastgesteld) noemen CPO niet.
+2. **Buitengebied: "maatwerk, geen volkshuisvestelijke opgave", en per erf maximaal 3 nieuwe woningen.** Het kader is de **sloopstaffel** in Bijlage II van de Woonagenda 'Goed Wonen' 2024-2028 (raad 11-07-2024, CVDR723659, in werking 09-08-2024): minder dan 1.000 m² sloop geeft geen woning, 1.000-2.000 m² één, 2.000-3.000 m² twee en meer dan 3.000 m² drie, telkens naast de bestaande bedrijfswoning; maximaal 750 m³ per woning, alleen in de gebieden Veluweflank en IJsselvallei. Daarnaast: woningsplitsing (maximaal 4 woningen), nieuwe landgoederen (vanaf 10 ha) en het Beleidskader Kavelsplitsing (raad 11-12-2025; +1 woning bij sloop van ≥ 250 m² bijgebouwen). **Een cluster van 10-12 woningen past in geen van deze regimes**; een precedent van 10 woningen of meer buiten de kernen is niet gevonden (grootste: 3 nieuwe woningen).
+3. **Grote projecten zijn kernuitbreidingen** (Zuukerenk, 't Slath, Kerkenland, Kopermolen). De enige route voor 10-12 woningen is een locatie in of aan een kern (Epe, Vaassen, Emst, Oene), via de wijzigingsrondes van het omgevingsplan (aanleveren 1 april of 1 oktober; conceptverzoek verplicht), met de Woonagenda-eis van **35% sociale huur vanaf 10 woningen** (Woonagenda) resp. **vanaf 11 woningen bij inbreiding, ongeacht het aantal bij uitbreiding** (Prijsklassenbeleid 2026): voor een CPO zonder corporatiepartner nauwelijks haalbaar [INT].
+4. **Raad en kosten:** de raad adviseert **bindend** bij een BOPA voor **6 woningen of meer** (raadsbesluit 14-12-2023); participatie is bij elke BOPA verplicht. Leges 2026: omgevingsplanactiviteit bouwen 2,87% → 1,98% van de bouwkosten (max. € 104.136) plus BOPA-toeslag € 7.897 plus bouwtechnisch deel; indicatief € 100-140 duizend voor 10-12 woningen [BER, niet door de gemeente bevestigd]. Anterieure overeenkomst met bankgarantie; planschade voor de initiatiefnemer.
+5. **Provinciaal:** 94,8% van de landbouwgrond ligt in het Nationaal Landschap Veluwe en 95,7% in de streek IJsselvallei (kernkwaliteitentoets art. 5.33/5.38 praktisch altijd), 25,1% in de Groene ontwikkelingszone (provinciale puntenmethode), 11,0% in het GNN, 16,8% in het stikstofreductiegebied en 64,4% in het intrekgebied; slechts 0,1% (6,3 ha) ligt buiten alle gebieden van de BOPA-adviesgevallenlijst [BER]. Epe past de provinciale rekentool toe (Gortelseweg 18); een Regisseur Ruimte, Matrix, art. 5.64 lid 2-afwijking of provinciale zienswijze komt in de Epe-stukken niet voor.
+6. **Regio en aantallen:** Stedendriehoek; opgave **2.250 woningen 2025-2034** (1.350 + 900; 2/3 betaalbaar, 30% sociale huur); gerealiseerd 2022-2025: **357** woningen (ruim 200 in 2025). Volgordelijst netcongestie (22-09-2026): 48 woningbouwprojecten, 1.900 woningen; geen CPO en geen buitengebiedproject behalve Ledderweg 48-50 (3 woningen).
+7. **Bestuur:** gemeenteraadsverkiezingen 18-03-2026; **geen coalitie meer in vorming.** Coalitie CDA + VVD + SGP-ChristenUnie + Hart voor Lokaal + Gemeentebelangen (12 van 23 zetels); **wethouder Wonen en Ruimtelijke ontwikkeling: Manon Tibben (VVD)**. Akkoord: 1.800 woningen tot 2030, minimaal 35% sociale huur en betaalbare koop, splitsen en hergebruik; **niets over CPO, zelfbouw of woningbouw in het buitengebied.**
+8. **Eindoordeel:** 10-12 woningen buiten de kernen op agrarische grond: **laag** (gemeentelijk geen route, provinciaal zware toets). 3 woningen op een bestaand erf met ≥ 3.000 m² sloop: kansrijk. CPO van 10-12 woningen aan of in een kern: **mogelijk**, maar zonder gemeentelijke grond of CPO-beleid en met 35%-sociale-huur-eis; eerste stap: Hans Stijf (adviseur Woningbouwontwikkeling) en een conceptverzoek (€ 250) / principe-uitspraak (€ 900).
+
+---
+
+## 1. CPO-beleid
+- **Geen eigen CPO- of zelfbouwbeleid.** In 558 CVDR-werken van Epe geen CPO-regeling; Gemeenteblad-treffers op "collectief particulier opdrachtgeverschap" nul; Grondprijzennota 2026 kent geen CPO-categorie; de Nota Grondbeleid 2024 bevat geen CPO-/zelfbouwbepaling [PRIMAIR].
+- **Vermeldingen in beleid** [PRIMAIR]:
+  - Woonagenda 'Goed Wonen' 2024-2028 (raad 11-07-2024), paragraaf kern Epe: "Bij woningbouw voor senioren zijn geclusterde woonvormen belangrijk. Dat kan door de bouw van appartementen rondom het centrum (mits niet te ver de hoogte in), maar denk ook zeker aan CPO-projecten en hofjeswoningen." Dit is de enige expliciete CPO-vermelding in de vastgestelde Woonagenda. Uitgangspunt 4: "We streven er naar om per kern minimaal een 'andere' woonvorm (hofjes, tiny houses, etc.) te realiseren" met als vervolgactie een beleidskader voor andere woonvormen (niet gevonden).
+  - Concept/informatienota Woonagenda (13650477, 11-01-2024): "We streven ernaar om in elke kern minimaal één locatie met een bijzondere woonvorm te ontwikkelen (zoals tiny houses, hofjeswoningen, collectief particulier opdrachtgeverschap)"; in de vastgestelde versie is "CPO" alleen nog bij de kern Epe genoemd. D66 stelde technische vragen of CPO een 'woonvorm' is (13684839; antwoord niet gelezen).
+  - Woonagenda 2019-2023 (7552631, 20-06-2019): "We denken daarbij voor jongeren onder andere aan Collectief Particulier Opdrachtgeverschap (CPO)."
+  - Woningbehoefte Oene (8656582, 28-05-2020): 16,5% (20 respondenten) wil "bouwen in een vorm van CPO", 22,3% een bouwkavel.
+  - Manifest 'passend beleid voor collectieve en andere woonvormen' (9752300, ingekomen stuk 18-02-2021; afzender niet vastgesteld).
+  - Omgevingsvisie 'Natuurlijk goed leven' (ontwerpversie): geen CPO-vermelding.
+- **Ervaring:** zie §7 (Ibbeltje, 2021-2022).
+- **Coalitieakkoord 2026-2030:** geen CPO, zelfbouw of collectief wonen; wel "nieuwe en flexibele woonvormen … zoals tijdelijke woningen, het splitsen van huizen en het herbestemmen van gebouwen" (zie §10).
+
+## 2. Openheid voor nieuwbouw buiten woonkernen
+- **Voorkeursvolgorde** (Woonagenda p. 14) [PRIMAIR]: "In de basis geven we de voorkeur aan woningbouw op transformatie- en inbreidingsplekken in de dorpen", maar "Transformatie en inbreiding zijn mooi, uitbreiding is noodzakelijk … Bouwen op uitbreidingslocaties aan de randen van onze kernen is daarom noodzakelijk." Uitbreidingslocaties in de Omgevingsvisie: 't Slath, Zuukerenk, Griseeweg, Kerkenland, Sprenghenparc en Oosterhof Zuid. Omgevingsvisie: Epe/Vaassen woninguitbreiding; Oene/Emst karakter behouden en woningbouw voor lokale doelgroepen.
+- **Buitengebied** (Woonagenda p. 14): "Verder zijn er beperkte mogelijkheden voor woningbouw in het buitengebied. Het gaat daarbij niet zo zeer om een volkshuisvestelijke opgave, als wel om het oplossen van andere ruimtelijke opgaven. In de eerste plaats de transitie van de agrarische sector. Zeker aan de rand van de Veluwe zullen er de komende jaren agrarische bedrijven zijn die stoppen als gevolg van de stikstofproblematiek. Om deze bedrijfsbeëindigingen mogelijk te maken is op kleine schaal woningbouw mogelijk, waarbij wel diverse randvoorwaarden gelden …" Het Afwegingskader Woonzorg (2021): "De gemeente Epe voert een terughoudend beleid als het gaat om het toevoegen van nieuwe bebouwing en functies in het buitengebied … Een uitzondering op dit beleid vormt het beleid voor functieverandering van vrijkomende agrarische bebouwing."
+- **Ladder:** Epe heeft geen eigen laddernota. Initiatiefnemers leveren ladderonderbouwingen aan met de lezing dat maximaal 11 woningen binnen een dorpskern geen nieuwe stedelijke ontwikkeling is en 12 woningen wel (ABRvS 2015) (o.a. Hoofdstraat 117, 18 woningen; Baanwachter/Kerkenland). Deze lezing wordt door initiatiefnemers geciteerd; vastgesteld gemeentelijk beleid is het niet [PRIMAIR]. Het Woonagenda-kader verwijst nog naar de ladder; de gemeentelijke BOPA-adviesdrempel is 6 woningen, niet 12.
+- **Volkshuisvestingsprogramma (Wet versterking regie volkshuisvesting):** niet vastgesteld; op de presentatie van 17-09-2026 (17461850) staat "in de toekomst Volkshuisvestingsprogramma"; het addendum Woonzorgagenda is uitgesteld vanwege de Wet (informatienota 02-12-2025, 16322975). Het programma wijst dus (nog) geen buitengebied- of uitbreidingslocaties aan. De Woonagenda 2024-2028 fungeert als volkshuisvestelijk programma (CVDR723659).
+
+## 3. Openheid voor agrarische herbestemming (10-12 woningen)
+
+### 3.1 Wettelijk/procedureel kader
+- **Omgevingsplan:** CVDR696234 (versie 5, in werking 26-10-2026) is een **hybride**: het nieuwe deel bevat wijzigingsbesluiten 2025-1, 001, 002 'Emst en Oene' (raad 24-09-2026), 003 'Kerkenland' (raad 09-07-2026) en 004 'Kopermolen'; het **bestemmingsplan Buitengebied Epe (raad 23-03-2017)** geldt als tijdelijk deel tot uiterlijk 01-01-2032. Dat plan kent geen functieverandering naar wonen en maakt geen nieuwe burgerwoningen mogelijk behalve via woningsplitsing; wijzigingsbevoegdheden uit bestemmingsplannen zijn niet meer toepasbaar (toelichting bij art. 5.127) [PRIMAIR, DO4]. Het Herstelplan Buitengebied 2020 is nog in procedure: Raad van State gaf op 04-02-2026 een tussenuitspraak met bestuurlijke lus (26 weken); herstelbesluit raad 09-07-2026.
+- **Routes in de praktijk:** (a) locatiegerichte **wijziging van het omgevingsplan door de raad** in een van de twee jaarlijkse wijzigingsrondes (Koeweg 49, Kerkenland, Kopermolen; ook de TAM-vorm bij Ledderweg 48-50 Zuuk); (b) **buitenplanse omgevingsplanactiviteit (BOPA)** door het college (Parkweg 5 Epe, 25 appartementen; Emsterweg 18-20 Vaassen; Deventerweg 11 Oene, 3 woningen). Bij een BOPA van 6 woningen of meer is **bindend advies van de raad** vereist (raadsbesluit 14-12-2023, Gemeenteblad 2024, 45086, in werking 01-01-2024), tenzij het project binnen aanvaard beleid past; participatie is bij alle BOPA's verplicht (raadsbesluit 14-12-2023, zaaknr. 921130). De gemeente verkiest raadsadvies in de conceptfase (reguliere beslistermijn van 8 weken is te kort; raadsvergadering 25-09-2025).
+- **Provinciaal kader (Gelderland, `provincie_gelderland.md` §1.6, §2, §4):** geen provinciebreed instrument voor nieuwe woningen buiten de kernen. Voor Epe tellen (zie §3.2 en Bijlage B C): de landschapsregel art. 5.33 / streekregels (IJsselvallei art. 5.38, Veluwe art. 5.44 "grote terughoudendheid"), de Groene ontwikkelingszone (art. 5.19-5.25, puntenmethode), het GNN, het stikstofreductiegebied (vanaf 23-10-2026), het intrekgebied en de regionale woonafspraken (art. 5.64).
+- **Rekenformule:** er is geen provinciebrede formule buiten de Groene ontwikkelingszone. De gemeentelijke sloopstaffel (hieronder) is de gemeentelijke formule. In de Groene ontwikkelingszone gebruikt Epe de provinciale rekentool (Gortelseweg 18: impact −1.530 punten, compensatie 550 punten; de provincie bevond de versterkingsopgave "akkoord").
+
+### 3.2 Gemeentelijke houding en kader (Woonagenda, Bijlage II) [PRIMAIR]
+- **Sloopstaffel vrijkomende (agrarische) bedrijfsbebouwing** (Woonagenda p. 49-50; CVDR723659): "Hergebruik en/of functieverandering van vrijkomende (agrarische) bedrijven en bedrijfsgebouwen verhogen de leefbaarheid in het landelijk gebied. Het is vanuit de kwaliteit van het buitengebied bezien van belang om ruimte te blijven bieden voor functieverandering." Te slopen opstallen → nieuw te bouwen woningen *naast de bestaande bedrijfswoning*:
+
+| Te slopen opstallen | Nieuwe woningen |
+|---|---|
+| < 1.000 m² | 0 |
+| 1.000 – 2.000 m² | 1 |
+| 2.000 – 3.000 m² | 2 |
+| > 3.000 m² | 3 |
+
+  Voorwaarden: alleen fysiek aanwezige legale gebouwen van ≥ 25 m² tellen mee; sloop als voorwaardelijke verplichting; maximaal 750 m³ per woning (bestemmingsplan Buitengebied); landschapsanalyse, erfinrichtingsplan en beeldkwaliteitsplan; verplichte landschappelijke inpassing; klimaatadaptief/energieneutraal; projectgebied binnen de landschappelijke gebieden **Veluweflank of IJsselvallei**; de bedrijfsbestemming wordt omgezet naar Wonen met omliggende gebiedsbestemming. Bij "bijzondere redenen" kan worden bezien of elders een ruimtelijk aanvaardbaardere locatie is (verevening).
+- **Herkomst van de drempels:** het concept had 1.400/2.400/4.000 m²; het amendement SGP-ChristenUnie + CDA (20-06-2024, behandeld 11-07-2024) verlaagde dit naar 1.000/2.000/3.000 m². De vastgestelde tekst bevat de lage drempels, dus het amendement is kennelijk aangenomen [INT]; de stemuitslag is niet gelezen.
+- **Nieuwe landgoederen** (p. 51): minimaal 10 ha (kleiner, maar > 8 ha, bij bijzondere meerwaarde); 50% binnen de Groene ontwikkelingszone en bestemd tot Natuur; energieneutraal en klimaatadaptief; maximaal 1.200 m³ (landhuis) of 750 m³ voor twee kleinere woningen.
+- **Woningsplitsing** (p. 47-48): een woning mag in maximaal vier grondgebonden woningen worden gesplitst (hoofdgebouw ≤ 750 m³, tenzij de bestaande woning groter is).
+- **Beleidskader Kavelsplitsing** (raad 11-12-2025, Gemeenteblad 2026, 31391, 26-01-2026; amendement "gewijzigde vaststelling"): buiten de bebouwde kom maximaal één extra woning per erf, alleen in het hoofdgebouw van een voormalige boerderij of bij sloop van ≥ 250 m² legale vrijstaande bijgebouwen; ≤ 750 m³; erfinrichtingsplan; uitsluitingsgebieden in of nabij natuurgebied (Natura 2000 en stikstofzonering, GNN); niet te combineren met woningsplitsing, landgoed of VAB-regeling. "Het kader geeft richting maar biedt geen rechtstreekse planologische mogelijkheden. Kavelsplitsing is altijd maatwerk." Gemeentelijke definitie: bebouwde kom = Epe, Vaassen, Oene, Emst; buitengebied = Veluwe, Veluweflank, IJsselvallei.
+- **Signaal:** drie flexwoning-initiatieven zijn verkend en niet vervolgd; één in het buitengebied, geïnitieerd door een inwoner/ondernemer, "sloot niet aan bij de ruimtelijke kaders" (informatienota 17-09-2024, 14542170). Het coalitieakkoord 2026 wil agrariërs "meer kansen bieden om hun bedrijf te verbreden met extra activiteiten" en de vaste bewoning van solitaire recreatiewoningen onder voorwaarden verruimen; geen nieuw woningbouwbeleid voor het buitengebied.
+
+### 3.3 Concreet stappenplan (CPO in of aan een kern; BOPA of omgevingsplanwijziging)
+| Stap | Wat | Indicatieve duur / kosten | Bron |
+|---|---|---|---|
+| 1 | Informeel gesprek met Hans Stijf (adviseur Woningbouwontwikkeling) en wethouder Tibben; aansluiting bij Woonagenda-programma verkennen | enkele weken | presentatie 17-09-2026 (17461850) |
+| 2 | Conceptverzoek (Omgevingsloket); verrekend met latere aanvraag; eventueel principe-uitspraak college | conceptverzoek € 250; principe-uitspraak € 900 | Tarieventabel 2026 (CVDR749618) |
+| 3 | Intern vooroverleg 'Omgevingstafel Epe' (gemeentelijk, geen provinciale tafel) | — | RIS |
+| 4 | Aanleveren onderbouwing vóór **1 april** (besluit eerste helft volgend jaar) of **1 oktober** (tweede helft) voor de wijzigingsronde; participatie; anterieure overeenkomst; provincie en waterschap Vallei en Veluwe worden om advies gevraagd | 9-21 maanden tot raadsbesluit [INT]; Koeweg 49: onderbouwing 20-10-2025 → ter inzage 1-6/12-7-2026 → vastgesteld 24-09-2026 (≈ 11 maanden) | epe.nl/omgevingsplan-wijzigen; 17336835 |
+| 4b | Alternatief: BOPA met raadsadvies in de conceptfase (≥ 6 woningen) | reguliere beslistermijn 8 weken; raadsadvies in conceptfase | gmb-2024-45086; raadsvergadering 25-09-2025 |
+| 5 | Vaststelling (raad of college), ter inzage, beroep | beroepstermijn 6 weken; Kerkenland onherroepelijk op 22-09-2026 zonder zienswijzen | Vaassen Actief 22-09-2026 |
+| 6 | Netaansluiting: plaats op de **volgordelijst transportcapaciteit** (Liander beslist) | zie §11/Bijlage B C6 | Gemeenteblad 2026, 447571 |
+
+Provinciale stappen: voorkantsamenwerking met de Regisseur Ruimte, de Matrix (pre-advies bij > 20 woningen), BOPA-gevallenlijst Prb 2024 nr. 3109 (advies/instemming) — in Epe-stukken niet teruggevonden (zie Bijlage B E1-E3). In de praktijk betrekt Epe de provincie vooral bij plannen in de GOZ/het GNN (rekentool) en bij Natura 2000-vergunningen.
+
+### 3.4 Kansrijk vs. kansarm [INT, op grond van de bovenstaande bronnen]
+| Factor | Kansrijker | Kansarmer |
+|---|---|---|
+| Ligging | in of direct aan de kern Epe, Vaassen, Emst of Oene; geen overlay | buitengebied op onbebouwde grond; Veluwerand (Gortel, Oosterhuizen, De Vossenberg, De Epenhorst) en IJsseluiterwaarden bij Oene-oost |
+| Bestaand erf | ≥ 3.000 m² legale bedrijfsbebouwing te slopen (max. 3 woningen) | < 1.000 m² sloop (0 woningen) |
+| Schaal | ≤ 5 woningen (maatwerk, geen prijsklassenbeleid) of ≤ 10 (inbreiding) | ≥ 11 woningen (35% sociale huur), ≥ 6 (bindend raadsadvies bij BOPA), ≥ 12 (ladder) |
+| Programma | senioren/geclusterd, betaalbaar, startersvoorrang, nul-op-de-meter | uitsluitend duur |
+| Overlays | buiten GNN, GOZ, stikstofreductiegebied, ganzenrust | binnen GNN (uitgesloten), GOZ (puntenmethode), Natura 2000-zone |
+| Stikstof/net | woningbouw die op de volgordelijst staat | aansluiting niet geborgd |
+
+### 3.5 Eindoordeel per schaalscenario
+| Scenario | Haalbaarheid | Toelichting |
+|---|---|---|
+| 1-3 woningen op bestaand erf met ≥ 1.000-3.000 m² sloop (Veluweflank/IJsselvallei) | **Kansrijk** | Precedenten: Heemhoeveweg 2 Emst (2021, 1), Dijkhuizerzandweg 15 Epe (2022/2024, 2), Gortelseweg 18 Vaassen (12-12-2024, 2-3), Koeweg 49 Emst (24-09-2026, 3), Deventerweg 11 Oene (2026, 3 + 2 bedrijfswoningen) |
+| 3-6 woningen op bestaand erf | **Beperkt** | Staffel geeft maximaal 3; woningsplitsing tot 4; combineren is niet toegestaan |
+| 3-6 woningen in of aan de kern (CPO) | **Mogelijk** | ≤ 5 woningen maatwerk; geen gemeentelijke grond; raadsadvies pas vanaf 6 (BOPA) |
+| 10-12 woningen op onbebouwde agrarische grond buiten de kern | **Laag / praktisch uitgesloten** | Geen gemeentelijk instrument; provinciale kernkwaliteitentoets; "geen volkshuisvestelijke opgave" |
+| 10-12 woningen op bestaand erf (bedrijfsbebouwing) | **Laag** | Zou ca. 10.000+ m² sloop vergen voor een (niet bestaande) staffel van 10+ woningen [INT]; maximaal 3 |
+| 10-12 woningen aan/in de kern als CPO | **Mogelijk, voorwaardelijk** | 35% sociale huur (corporatiepartner), bindend raadsadvies bij BOPA, plaats op volgordelijst netcongestie, geen gemeentegrond |
+
+Vervolgstap: afspraak met Hans Stijf en wethouder Manon Tibben; conceptverzoek bij het Omgevingsloket.
+
+## 4. VAB-beleid (Vrijkomende Agrarische Bebouwing)
+- **Ja, Epe heeft VAB-beleid** (opgelost provinciebestand-lacune L2.6): de sloopstaffel in Bijlage II van de Woonagenda 2024-2028 (CVDR723659; Gemeenteblad 2024, 347577), zie §3.2. Voorgangers waren een beleidsregel uit de Woonagenda 2019-2023 (raad 20-06-2019) en regelingen in CVDR296171 (2011), CVDR445422 (2015), CVDR444605 (2016) en CVDR120263 (2007), allemaal vervallen. Het bestemmingsplan Buitengebied (2017) bevat zelf geen functieverandering naar wonen.
+- **Regionaal kader:** de bestemmingsplantoelichting 2017 noemt de Streekplanuitwerking Functieverandering Noord-Veluwe (2007) nog als uitgangspunt voor functieverandering naar werken; het Stedendriehoek-kader "Waar de stallen verdwijnen" (2008) is in de Epe-stukken niet gevonden (grep op RIS). Formeel is het regionaal kader vervallen [PB].
+- **Precedenten** [PRIMAIR]: Heemhoeveweg 2 Emst (raad 08-07-2021; sloop 1.700 m², 8.000 m² extra bos); Dijkhuizerzandweg 15 Epe (raad 07-07-2022, correctieve herziening 29-02-2024); Bijsterbosweg 3 (regels 10-03-2022); Gortelseweg 18 Vaassen (beslisnota 1072433, raad 12-12-2024: "Bij de sloop van 2400 m² aan bedrijfsbebouwing mogen twee woningen worden gebouwd. Het plan voorziet in de sloop van 2750 m²"; GOZ, 3 woningen netto incl. monument); Wijziging 002 'Emst en Oene' met Koeweg 49 (sanering ca. 8.000 m² kassen, 3 woningen, raad 24-09-2026); Ledderweg 48-50 Zuuk (3 woningen waarvan 1 bestaande bedrijfswoning, TAM-omgevingsplan, raadsbehandeling 21-05-2026); Deventerweg 11 Oene (BOPA, 3 woningen + 2 bedrijfswoningen die burgerwoning worden, Gemeenteblad 2026, 280909). Hoogste aantal nieuwe woningen per VAB-locatie: 3. Geen collectief/CPO-precedent.
+- **Evaluatie:** de Woonagenda kondigde voor 2024 een evaluatie van de VAB-voorwaarden aan; een uitkomst is niet gevonden (mogelijk niet gepubliceerd). Een evaluatie van het adviesrecht van de raad (aangekondigd voor Q3/Q4 2025) is evenmin gevonden.
+- **Stoppersregeling/LBV+:** Epe voert omgevingsplanwijzigingen door waarbij landbouwhuisdieren worden uitgesloten (o.a. Wiemanstraat 20, Achterenkweg 2, Gatherweg 40) en biedt "begeleiding op maat voor agrarische piekbelasters" (epe.nl). Op 18-08-2026 sprak het college met ruim 50 boeren, die verwachten dat over 10 jaar weinig volwaardige bedrijven overblijven (persbericht): potentieel VAB-aanbod, maar geen woningbouwbeleid voor het buitengebied aangekondigd.
+- **Provinciale ondersteuning:** de pilot "Wonen op de boerderij", het Versnellingsteam, het Expertteam Woningbouw, Atelier Gelderland, het Gelders Genootschap/ervenconsulent en de mini-leerlijn collectief wonen komen in de Epe-stukken **niet** voor (0 treffers) [leeg resultaat is geen bewijs].
+
+## 5. Grondbeleid
+- **Situationeel grondbeleid** (Nota Grondbeleid Epe, raad 19-09-2024, CVDR725681; bijlage GROND-028, 33 p. gelezen) [PRIMAIR]: "Epe voert een situationeel grondbeleid en past per ruimtelijk initiatief maatwerk toe." Per initiatief wordt gekozen tussen actief, actief faciliterend of faciliterend; actief grondbeleid alleen na raadsbesluit; actief faciliterend bij Kerkenland en Zuukerenk. Gronduitgifte volgens het Didam-regime (in beginsel openbare verkoop); "Uitgifte in volle eigendom is het uitgangspunt … erfpacht of recht van opstal is maatwerk" (canon marktconform). Kostenverhaal bij voorkeur privaatrechtelijk via een anterieure overeenkomst; voorkeursrecht (Wvg) en kavelruil in landelijk gebied zijn genoemd. Geen CPO-/zelfbouwbepaling.
+- **Grondposities:** epe.nl (geraadpleegd 31-10-2026): "Gemeente Epe is eigenaar van stukken grond in de gemeente. Op dit moment geven wij in principe geen grond uit." (ook geen pacht) [PRIMAIR]. Gemeente kocht Oenerweg 63-67 Epe voor wonen/zorg/opvang (persbericht 28-08-2025). Snippergroenbeleid 2025 apart.
+- **Grondprijzennota 2026** (9 p.): vrije-sectorkavels goedkoop/middelduur € 220-500 per m², duur € 260-625 per m² (excl. btw, k.k.); sociale huur vast € 22.500 per woning (€ 18.500 appartement); specifieke woonvormen (flexwoningen, tiny houses): taxatie; reststroken bebouwde kom € 90 per m². Geen agrarische/buitengebied-grondprijs en geen CPO-regel.
+- **Actueel kavelaanbod:** geen CPO-/zelfbouwkavels; loting kavels Hoge Weerd (4 seniorenwoningen, 5 inschrijvingen, 19-04-2022) is het laatst gevonden voorbeeld.
+- **Grote ontwikkellocaties** (epe.nl/woningbouwprojecten, stand maart 2026, geraadpleegd 31-10-2026; presentatie 17-09-2026) [PRIMAIR]: zie tabel in §6; geen enkel project met gereserveerde CPO-kavels op de projectpagina's. Bouwtijd gemiddeld 7 jaar.
+- **Plancapaciteit:** Woonagenda (peil 2023): 1.940 woningen, 76% zacht (kern Epe 80%); per 01-01-2025 "in behandeling" 2.363 bruto = 105% van 2.250 [BER]. De Woonagenda kent een onderdeel "Regie op plancapaciteit" (p. 52-53): de gemeente kan plannen terughalen en harde plancapaciteit verevenen; alle kosten voor rekening van initiatiefnemers. Een reservepercentage of een aparte CPO-post is niet gevonden; kleinschalige projecten tellen mee in "in behandeling". Het provinciebestand noemt 1.843 (100%) / 304 harde (16%) plancapaciteit; in de Epe-bron is 1.843 de oude opgave (zie Tegenstrijdigheden).
+- **Woningbouwtempo en opgave:** Woondeal 2022-2030: 1.800 woningen (bruto 1.843 / netto 1.789); actualisatie 2025: 2025-2030 1.350, 2031-2034 900, totaal **2.250** (bruto, netto 2.180); gerealiseerd 2022-2024 153 bruto; **357 in 2022-2025** waarvan ruim 200 in 2025 (presentatie 17-09-2026); 140 opgeleverd in 2025 en 300 in aanbouw (epe.nl, maart 2026). Pijplijn: ruim 200 in aanbouw, ruim 400 met vergunning/omgevingsplan (180 Kerkenland, 125 Kopermolen, 30 Emst-Zuid), 700 't Slath + Zuukerenk, 600 transformatie/inbreiding.
+
+## 6. Praktijkvoorbeelden (2024-2026)
+| Voorbeeld | Datum | Omschrijving | Bron | Relevantie |
+|---|---|---|---|---|
+| Woonagenda 'Goed Wonen' 2024-2028 | raad 11-07-2024 | Vaststelling VAB-staffel, woningsplitsing (max. 4), landgoederen, 35% sociale huur vanaf 10 woningen | CVDR723659; Vaassen Actief 14-08-2024 | Kaderstellend; geen CPO-beleid |
+| Gortelseweg 18 Vaassen | raad 12-12-2024 | Voormalige wasserij; sloop ca. 2.750 m²; +3 woningen; GOZ-rekentool (−1.530 / +550 punten); provincie akkoord | 14808817/-12/-20 | Eerste GOZ-precedent; schaal ≤ 3 |
+| Kerkenland (Baanwachter), Vaassen | omgevingsplan 003 raad 09-07-2026; onherroepelijk 22-09-2026 | 160 woningen + 21 woonzorgwoningen (projectpagina: 150; presentatie 17-09-2026: 180); 35% sociale huur, 20% goedkope koop tot € 290.000, 20% middelduur tot € 405.000; eerste grote uitbreidingslocatie goedgekeurd | Vaassen Actief 22-09-2026; 17067375 | Voorbeeld uitbreiding; geen CPO |
+| Koeweg 49 Emst | raad 24-09-2026 | Sanering ca. 8.000 m² kassen; 3 woningen; omgevingsplan-wijziging 002 | 17336826/-35 | Recent VAB-precedent (11 maanden) |
+| Ledderweg 48-50 Zuuk | raad 21-05-2026 | TAM-omgevingsplan, 3 woningen (1 bestaande); staat op positie 1 van de volgordelijst netcongestie | 16863431; Gemeenteblad 2026, 447571 | Enig buitengebiedproject op de volgordelijst |
+| Parkweg 5 Epe | positief raadsadvies 21-05-2026 | BOPA, 25 sociale huurappartementen (Triada), in de kern | 16863289 | BOPA-route en raadsadvies |
+| Kopermolen (Royal Vaassen), Vaassen | raad 15-10-2026 (uitslag niet gevonden) | 123-125 woningen; stikstofzone: PS-besluit 23-09-2026 (in werking 23-10-2026) past de contour aan, waarna het project er volgens het college buiten valt | 17421427 e.a. | Stikstof/woningbouw |
+| Beleidskader Kavelsplitsing | raad 11-12-2025 | +1 woning per erf bij sloop ≥ 250 m² | Gemeenteblad 2026, 31391 | Kleinschalige route |
+| Flexwonen-initiatief buitengebied | informatienota 17-09-2024 | Door inwoner/ondernemer geïnitieerd; niet vervolgd omdat het niet aansloot bij ruimtelijke kaders | 14542170 | Houding t.o.v. particulier initiatief in buitengebied |
+| Stikstofstroken | GS 20-01-2026 | Stroken ≤ 500 m; stroken bij beken Vaassen vervallen; "sommige woningbouwprojecten lopen vertraging op" | epe.nl/stikstofarme-zones…; Vaassen Actief 22-01-2026 | Vertraging, geen namen/aantallen |
+| Gesprek met agrariërs | 18-08-2026 | Burgemeester Horn en wethouder Tibben met ruim 50 boeren | persbericht via Vaassen Actief | Agrarische transitie |
+| Netcongestie volgordelijst | 22-09-2026 | 48 woningbouwprojecten, 1.900 woningen; Liander beslist | Gemeenteblad 2026, 447571 | Aansluitrisico (zie §11) |
+
+Overige kernuitbreidingen: **Zuukerenk** ca. 450 woningen (292 koop + 158 huur; visiedocument raad 25-04-2024; 75% betaalbaar nagestreefd; volgordelijst: 600), **'t Slath** ca. 250 (154 koop + 101 huur; haalbaarheid raad 13-10-2022; omgevingsplan verwacht 2027; Rijks-Woningbouwimpuls toegekend 2023; extra onderzoeken stikstof, spuitzonering en verkeer; volgordelijst: 150), Sprenghenparc (64), Oosterhof Zuid, Emst-Zuid (30), Kloosterhof Oene (39). Geen project met CPO-component.
+
+## 7. Inventarisatie bestaande initiatieven (CPO/collectief)
+- **Geen lopend CPO of collectief wooninitiatief gevonden.**
+- **Ibbeltje (Tippe 3, Epe; voormalige kleuterschool, gemeentelijk monument, 3 bungalows):** begin 2021 zocht de gemeente CPO-groepen (reageren voor 01-03-2021). Epe in 2022: "Gedurende zes maanden konden particuliere initiatiefnemers zich melden bij de gemeente. Dit leverde geen geïnteresseerden op. Daarom kiest de gemeente ervoor het bouwplan aan te bieden bij aannemers en ontwikkelaars" (loting onder vier partijen) [PRIMAIR, persbericht 13-04-2022]. Relevantie: Epe heeft CPO-ervaring maar wel een mislukte oproep; zonder groep, begeleiding en lokale binding kwam geen CPO tot stand.
+- Flexwonen Oenerweg (24 woningen, intentieovereenkomst Triada 2022; volgordelijst positie 5) en Habion De Boskamp (70) zijn corporatieprojecten.
+- 'Bewonersinitiatieven' in Oene (Woonagenda p. 37) en Kloosterhof Oene (39) zijn niet als CPO gekarakteriseerd.
+
+## 8. Huisvestingsverordening
+- **Ja:** Huisvestingsverordening gemeente Epe 2021 (CVDR649911 versie 2; raad 10-12-2020; eerste wijziging raad 17-04-2025 met terugwerkende kracht tot 01-01-2025; werkingsduur tot uiterlijk 01-01-2027; Gelderland positief advies 29-11-2024). Geldt voor woningmarktregio Epe-Hattem-Heerde [PRIMAIR, DO4].
+- **Inhoud:** woonruimteverdeling van corporatiehuur onder de huurtoeslaggrens (loting/inschrijfduur), urgentie, woonwagenstandplaatsen. **Geen koopregime, geen vergunningplicht voor nieuwbouwkoop en geen minimumpercentage sociale huur** (dat staat in Woonagenda/Prijsklassenbeleid). Het is dus niet de Noord-Veluwe-verordening uit het provinciebestand.
+- **Opvolger:** gezamenlijke nieuwe verordening met Heerde en Hattem in voorbereiding (beslisnota 17-04-2025, 15281877); regionaal Afsprakenkader huisvesting aandachtsgroepen Stedendriehoek 2026 (raadsinformatiebrief 30-03-2026 / 21-05-2026, 16870611); een vastgestelde opvolger is niet gevonden; DO4 verwacht de regionale urgentieverordening pas in 2027.
+- **Relevante prijsklassen voor nieuwbouwkoop** (Prijsklassenbeleid 2026, Woningbouwprogrammering januari 2026, CVDR757074; Gemeenteblad 2026, 68038, 13-02-2026, terugwerkend tot 01-01-2026; eerste uitwerking 2024 ingetrokken): goedkope koop ≤ € 290.000, middelduur € 290.000-405.000, duur vanaf € 405.000; sociale huur tot € 932,93, middenhuur tot € 1.228,07; zelfbewoningsplicht 5 jaar met kettingbeding; nul-op-de-meter: prijsverhoging € 12.750.
+
+| Categorie | Programma-eis |
+|---|---|
+| Tot en met 5 woningen | geen prijsklassenbeleid (maatwerk) |
+| Inbreiding 6-10 woningen | ≥ 20% goedkoop, ≥ 20% middelduur, max. 60% duur |
+| Inbreiding vanaf 11 woningen | ≥ 20% goedkoop, ≥ 20% middelduur, max. 25% duur, **≥ 35% sociale huur** |
+| Transformatie 6-10 woningen / vanaf 11 | ≥ 50% goedkope/middeldure koop (max. 50% duur) |
+| Uitbreiding, ongeacht aantal | ≥ 20% goedkoop, ≥ 20% middelduur, max. 25% duur, ≥ 35% sociale huur; huur totaal max. 55% |
+
+  Het college behoudt zich het recht voor af te wijken (art. 4.84 Awb). In het buitengebied is geen eigen categorie benoemd [INT].
+
+## 9. Zelfbouwloket / contactpersoon
+- **Zelfbouwloket:** niet gevonden (epe.nl/wonen en /bouwen noemen het niet) [PRIMAIR, negatief]. Waar het wel zou staan: epe.nl/wonen of afdeling Ontwikkeling Omgeving.
+- **Eerste aanspreekpunt woningbouwontwikkeling:** **Hans Stijf, adviseur Woningbouwontwikkeling** ("Eerste aanspreekpunt voor alle woningbouwontwikkelingen gemeente Epe"; taken: beleidsontwikkeling woningbouw, monitoren en evalueren, zo nodig ingrijpen en versnellen, voorlichting; presentatie 17-09-2026, 17461850). Contactgegevens staan niet in de bron.
+- **Wethouder Wonen en Ruimtelijke ontwikkeling:** Manon Tibben (VVD), mdtibben@epe.nl (epe.nl/burgemeester-en-wethouders, 31-10-2026).
+- **Vergunningen/conceptverzoek:** Omgevingsloket via epe.nl/omgevingsvergunning; participatiebeleid "Samen werken aan een plan" (2023), bijlage 1 conceptverzoek.
+
+## 10. Bestuurlijk klimaat
+- **Verkiezingen 18-03-2026** (opkomst 61,7%; 2022: 56,6%; epe.nl/verkiezingen) [PRIMAIR]: Forum voor Democratie 4 zetels (2.607 stemmen), CDA 3 (2.245), Nieuwe Lijn 3 (2.326), VVD 3 (2.197), SGP-ChristenUnie 3 (1.831), D66 2 (1.745), GroenLinksPvdA 2 (1.513; de raadspagina noemt de fractie "PRO Epe", dit is vermoedelijk dezelfde fractie [INT]), Hart voor Lokaal 2 (1.309), Gemeentebelangen Epe 1 (963) = 23 zetels.
+- **Coalitievorming — afgerond, niet meer in vorming:** informateur Eric Kemperman adviseerde een coalitie van CDA, VVD, SGP-ChristenUnie, Hart voor Lokaal en Gemeentebelangen (12 van 23 zetels; rapport 23-04-2026); de overige partijen wilden niet met Forum voor Democratie samenwerken; Gerhard Bos leidde de verdere onderhandelingen; coalitieakkoord "Samen bouwen aan een sterk, betrokken en toekomstbestendig gemeente Epe" 2026-2030 gepresenteerd op 25-06-2026 (Omroep Gelderland); raadsbesluit coalitieakkoord en benoeming wethouders 01-07-2026 (vergadering 1510734). Het raadsbesluit zelf is niet gelezen.
+- **College** (epe.nl, 31-10-2026): burgemeester **Tom Horn**; **Manon Tibben** (VVD; ruimtelijke ontwikkeling, verkeer en vervoer, **wonen**); **Maarten Heere** (CDA; economie, energietransitie, recreatie en toerisme, werk en inkomen, agrarische sector); **Gert van den Berg** (SGP-ChristenUnie; zorg, jeugd, cultuur/erfgoed); **Joost Boermans** (Hart voor Lokaal; financiën, participatie, asielopvang, vastgoed, sport); **Jan van Limburg** (Gemeentebelangen; openbare ruimte, klimaat/leefomgeving, toezicht en handhaving). Vijf wethouders, 4,5 fte. De gemeentesecretaris wordt op epe.nl genoemd; naam: Ferdinand Contant volgens deelonderzoek 1 [PRIMAIR].
+- **Coalitieakkoord 2026-2030 — wonen (letterlijk, epe.nl):** "Ons uitgangspunt blijft om tot 2030 de reeds eerder benoemde 1.800 woningen te realiseren. Wij zetten vooral in op betaalbare woningen … Ook willen wij nieuwe en flexibele woonvormen stimuleren, zoals tijdelijke woningen, het splitsen van huizen en het herbestemmen van gebouwen." / "… bij nieuwbouw minimaal 35% sociale huur en betaalbare koop." / "Meer woningen realiseren wij niet alleen door nieuwbouw. Wij gaan meer mogelijkheden creëren binnen de bestaande regelgeving, zoals het splitsen van woningen en kavels, het hergebruiken van gebouwen, premantelzorgwoningen en andere flexibele woonvormen." / "willen de mogelijkheden voor vaste bewoning van solitaire recreatiewoningen onder voorwaarden verruimen" / "Ook agrariërs willen we meer kansen bieden om hun bedrijf te verbreden met extra activiteiten." / "Bouwen en verbouwen moeten sneller en makkelijker … Hiermee willen we ook de woningbouw in Emst versnellen." Geen vermelding van CPO, zelfbouw, collectief wonen, nieuwe woningen in het buitengebied of VAB. Let op: het akkoord formuleert "35% sociale huur **en** betaalbare koop" samen, terwijl de Woonagenda en het Prijsklassenbeleid 35% **sociale huur** eisen.
+- **Duiding** [INT]: een bestuur dat vooral inzet op versnelling, betaalbaarheid en splitsen/hergebruik binnen bestaande regels; het is niet tegen CPO, maar het is geen drijvende kracht. De VVD heeft de portefeuille Wonen; Forum voor Democratie (grootste partij) zit niet in de coalitie.
+
+## 11. Kostenverhaal en leges
+- **Kostenverhaal:** anterieure overeenkomst als regel (Nota Grondbeleid, hoofdstuk 6; CVDR725681); Woonagenda p. 52-53: alle kosten voor rekening van de initiatiefnemers; planschade voor de initiatiefnemer; bankgarantie; zelfbewonings- en antispeculatiebeding bij betaalbare koop; verevening (heffing/fonds) bij kavelsplitsing met nog uit te werken spelregels; bij BOPA's anterieure overeenkomst [PRIMAIR].
+- **Leges 2026** (Tarieventabel gemeente Epe 2026, CVDR749618; raad 12-11-2025) [PRIMAIR]: conceptverzoek € 250 (100% verrekend bij daaropvolgende aanvraag, art. 2.52); principe-uitspraak college € 900 (art. 2.4a); omgevingsplanactiviteit bouwen: 2,87% van de bouwkosten tot € 50.000 (min. € 257), 2,46% van € 50.000-500.000, 2,07% van € 500.000-1.000.000, 1,98% daarboven (maximum € 104.136); toeslag buitenplanse omgevingsplanactiviteit (in strijd met plan) € 7.897 (kleine BOPA/kruimelgevallen € 357); bouwtechnisch deel 1,45% / 1,24% / 1,03% / 0,99% (maximum € 52.120). Bouwkosten worden getoetst aan Casadata.
+- **Indicatief rekenvoorbeeld** [BER; aannames niet uit een bron, niet door de gemeente bevestigd]: 10 woningen à € 400.000 (€ 4 mln): omgevingsplanactiviteit ca. € 50.000-63.000 + bouwtechnisch ca. € 45.000 + BOPA-toeslag € 7.897 = circa € 100-115 duizend (deelonderzoek 1). Deelonderzoek 4 komt bij 12 woningen à € 350.000 op circa € 137.000. Beide vallen onder de maxima per onderdeel; reken als bandbreedte € 100-140 duizend. Een apart tarief voor "wijziging omgevingsplan op verzoek" is niet in de tabel gevonden.
+- **Netcongestie:** raadsbesluit 30-05-2024 (zaaknr. 972825): "Vanwege de netcongestie zijn grootverbruik-aansluitingen niet mogelijk totdat deze congestie is opgeheven (de huidige verwachting is dat de netcongestie in 2029/2030 is opgeheven)". Beleidsregels volgordelijst (Gemeenteblad 2026, 418741, 08-09-2026; CVDR766228): criteria start bouw, projectrijpheid (een BOPA-vergunning telt mee), maatschappelijk belang en opleverdatum, loting bij gelijke stand; aanmelden kon t/m 13-09-2026. Volgordelijst 22-09-2026 (Gemeenteblad 2026, 447571): 51 posities, 48 woningbouwprojecten, **1.900 woningen**; geen CPO; Ledderweg 48-50 (3 woningen) staat op positie 1. Liander beslist uiteindelijk. Een raadsbrief van Regio Stedendriehoek (11-05-2026) waarschuwt voor een dreigende aansluitpauze eind 2026.
+
+## 12. Woningbehoefte en doelgroepen
+- **Woonagenda (Companen 2021/2023)** [PRIMAIR]: opgave 1.789 woningen netto 2022-2030 (behoefte 1.020: Emst 90, Epe 500, Vaassen 385, Oene 45; plus extra regionale opgave 769, vrijwel geheel kern Epe); 540 betaalbare koopwoningen, 625 sociale huur (550 door corporaties) en 180 middenhuur 2022-2030; 25% levensloopgeschikt; zelfbewoningsplicht en antispeculatiebeding. In Epe-kern: kleine, levensloopgeschikte woningen voor 1-2-persoonshuishoudens (senioren, starters) en vraag naar eengezinswoningen; bij Oene hoog aandeel gezinnen met kinderen.
+- **Ouderenkader Stedendriehoek** (afsprakenkader 30-10-2024; bevestigd in presentatie 17-09-2026): Epe **320 nultreden, 175 geclusterd, 70 zorggeschikt** (t/m 2031); gerealiseerd 2022-2025: 41 / 101 / 24. Geclusterd = cluster van minimaal 12 woningen met ontmoetingsruimte [PB]; een CPO van 10-12 woningen met gemeenschappelijke ruimte zit op die grens.
+- **Betaalbaarheid:** woondeal 2/3 (67%) betaalbaar, 30% sociale huur (bronnen noemen elders 70% of 75%: zie Tegenstrijdigheden); gerealiseerd 2022-2025: 250 woningen (70%) betaalbaar, 110 (31%) sociale huur.
+- **Aansluiting CPO** [INT]: een CPO-cluster van ouderen of starters past inhoudelijk bij de behoefte en bij "andere woonvormen", maar is in de programmering nergens als categorie vermeld; locatie in de kern is nodig om aan te sluiten bij het ouderenkader en de prijsklassen.
+
+---
+
+## Twee kernvragen
+### 1. Wonen in het buitengebied: ruimte voor een cluster van 10-12 woningen buiten de bestaande woonkernen?
+- **(a) Gemeentelijk:** **nee.** "Wonen in het buitengebied is maatwerk. Dit is geen volkshuisvestelijke opgave." Instrumenten: VAB-staffel (max. 3 nieuwe woningen), landgoed ≥ 10 ha (1-2 woningen), kavelsplitsing (+1), woningsplitsing (max. 4). Geen precedent ≥ 10 woningen buiten een kern. Enige route voor 10-12 woningen: locatie in of aan een kern (Epe, Vaassen, Emst, Oene) via inbreiding/uitbreiding binnen de woonprogrammering.
+- **(b) Provinciaal (Gelderland):** regionale woonafspraken (art. 5.64: past het project "binnen" de 2.250 woningen; Epe ziet elk project tot nu toe als passend); kernkwaliteitentoets art. 5.33/5.38 op 95% van de landbouwgrond; GOZ-puntenmethode op 25%; GNN-uitsluiting op 11%; stikstofreductiegebied op 17%; BOPA-advies/instemming op bijna alle landbouwgrond (99,9% in minstens één overlay van Prb 2024 nr. 3109) [BER].
+- **(c) Eindoordeel:** **laag** voor 10-12 woningen buiten de kernen; **mogelijk, voorwaardelijk** voor dezelfde schaal aan of in een kern. Onzekerheden: uitkomst VAB-evaluatie en Volkshuisvestingsprogramma, de toedeling van de 3.520/4.000 "te verdelen" woningen in de Stedendriehoek 2031-2034 (Epe staat al op 900), netcongestie, de definitieve tekst van de Gelderse omgevingsverordening na 23-10-2026.
+
+### 2. Agrarische herbestemming: ruimte voor omzetting van agrarisch bestemde grond naar bouw-/woonfunctie op deze schaal?
+- **(a) Gemeentelijk:** alleen **via bestaande bedrijfsbebouwing** (sloop → staffel, max. 3 woningen) of een nieuw landgoed ≥ 10 ha; **onbebouwde agrarische grond zonder sloop** heeft geen woonroute. 10-12 woningen zou volgens de staffel nooit mogelijk zijn.
+- **(b) Provinciaal:** idem als hierboven; Veluwe-streekregel "grote terughoudendheid" (art. 5.44) voor 4,3% van de landbouwgrond; het streekprofiel IJsselvallei vraagt "behoud van de open weidsheid" (kernkwaliteit 6).
+- **(c) Eindoordeel:** **nee voor 10-12 woningen** (gemeentelijk geen kader, provinciaal zware toets). De gunstigste zoekzones voor kleinere initiatieven (3-6 woningen op erf of aan een kern) liggen volgens de ringenanalyse rond Emst, Oene-west, Zuuk, Epe-kern en Vaassen-noord/Gatherweg [BER, indicatief]; de Veluwerand (Gortel, Oosterhuizen, De Vossenberg, De Epenhorst) en de IJsseluiterwaarden bij Oene-oost zijn praktisch gesloten.
+
+---
+
+## Bijlage B — Gelderland-controlepunten voor Epe
+*Status: G = gevonden; GD = gedeeltelijk; NG = niet gevonden; NVT. Bron-URL's en raadplegingsdatum (2026-10-31/11-01) staan in de deelrapporten (`ruwe-data/epe/raw/`) en in "Bronnen".*
+
+### A. Positie in het provinciale kader en woonafspraken
+| # | Bevinding | Status | Bron / waar te vinden |
+|---|---|---|---|
+| A1 | Woondealregio **Stedendriehoek**. Aantallen: 2022-2024 545 (oorspronkelijk); 2025-2030 1.350 (sociale huur 502, middenhuur 68, betaalbare koop 446); 2031-2034 900 (334/46/298) = **2.250 bruto/2.180 netto**; realisatie 153 bruto (2022-2024), **357 (2022-2025)**; 2.250 in 10 jaar vraagt ca. 225 per jaar, pijplijn > 1.000 in aanbouw/vergund/omgevingsplan. Positie ontwerp-Omgevingsvisie: dorpen/kleine kernen (interpretatie, [PB]); eigen Epe-zienswijze niet gelezen. | G | woondeal 2.0 (epe.nl/sites/default/files/2026-08/…); RIS 15213182, 17461850; WFS woningbouwregio's |
+| A2 | Plancapaciteit: Woonagenda 1.940 (76% zacht); 2.363 bruto "in behandeling" (105% van 2.250) per 01-01-2025; [PB] 1.843/304 harde niet bevestigd in de Epe-bron. Geen reservepercentage of CPO-categorie; "Regie op plancapaciteit" (Woonagenda p. 52). | GD | Woonagenda p. 34, 52-53; RIS 15213182 |
+| A3 | Afwijking art. 5.64 lid 2: geen enkele aanwijzing dat Epe is afgeweken of dit overwoog; alle motiveringen (Kerkenland, Koeweg 49, Parkweg 5) stellen dat het plan "past binnen de regionale woondeal". | NG (negatief) | ORI epe + Prb-SRU; zou staan in raadsbesluit omgevingsplan, Prb (instemming GS), Regio Stedendriehoek |
+| A4 | Betaalbaarheid: 2/3 betaalbaar, 30% sociale huur; Woonagenda 35% sociale huur vanaf 10 woningen; Prijsklassenbeleid 2026 (zie §8); eigen Huisvestingsverordening 2021 zonder koopregime; nieuwe verordening met Heerde en Hattem in voorbereiding. Prestatieafspraken Triada/Habion/Woonzorg Nederland niet gelezen. | G | gmb-2026-68038; CVDR649911, CVDR757074; RIS 15281877 |
+| A5 | Geen eigen laddernota; initiatiefnemers hanteren de 11/12-lezing; Volkshuisvestingsprogramma niet vastgesteld; Woonagenda is volkshuisvestelijk kader; BOPA-adviesdrempel raad: 6 woningen. | G/GD | RIS 17461850, 16322975; CVDR723659 |
+| A6 | Ouderenkader 320/175/70; realisatie 41/101/24; 25% levensloopgeschikt; per kern minimaal één "andere woonvorm"; Woonzorgagenda 2021 + Afwegingskader Woonzorg (CVDR674378, Epe, B&W 18-05-2021, in werking 18-03-2022: buitengebied alleen bij prikkelarme omgeving of landelijk zorgconcept); huisvestingsverordening tot 01-01-2027. | G | Woonagenda; 10167313; CVDR674378 |
+
+### B. Gemeentelijk kader voor het buitengebied en rekenmodellen
+| # | Bevinding | Status | Bron / waar te vinden |
+|---|---|---|---|
+| B1 | Eigen kader: ja — Woonagenda 2024-2028, Bijlage II (CVDR723659; raad 11-07-2024; in werking 09-08-2024): VAB-voorwaarden, nieuwe landgoederen, woningsplitsing, verevening; Beleidskader Kavelsplitsing (Gemeenteblad 2026, 31391); Prijsklassenbeleid. Niet "tijdelijk". Geen apart CVDR-nummer voor de VAB-voorwaarden; ze zijn onderdeel van CVDR723659. | G | CVDR723659/1; gmb-2024-347577 |
+| B2 | Rekenmethode: sloopstaffel (1.000/2.000/3.000 m² → 1/2/3), ≥ 25 m² per gebouw, legaal, 750 m³, landschapsanalyse/erfinrichtings-/beeldkwaliteitsplan; geen puntenmodel, geen ervenconsulent/Gelders Genootschap gevonden; "per saldo versterking" (art. 5.33) via landschappelijke inpassing; in de GOZ de provinciale rekentool. | G | Woonagenda p. 49-51; 14808812 |
+| B3 | Schaal: VAB max. 3; splitsing max. 4; kavelsplitsing +1; landgoed 1-2. Precedenten buiten de kernen 1-3 woningen; kernuitbreidingen 39-450. Geen precedent van 10-12 woningen op agrarische grond. | G | zie §3-4 |
+| B4 | Actualiteit: kader 2024 (herzien 20-06-2024 via amendement); omgevingsplan hybride (CVDR696234 v5); tijdelijk deel tot 01-01-2032; geen verwijzing naar het Stedendriehoek-kader 2008; herziening na de Omgevingsvisie/verordening 23-10-2026 niet aangekondigd; VAB-evaluatie 2024 niet gevonden. | GD | CVDR696234/5; RIS 17336826 |
+| B5 | Bebouwde kom (Epe, Vaassen, Oene, Emst) versus buitengebied (Veluwe, Veluweflank, IJsselvallei) volgens de gebiedskaart van de Omgevingsvisie; geen aparte contour "stedelijk gebied" in de regels. | GD | gmb-2026-31391 p. 2; CVDR755800 |
+| B6 | Kwaliteitsinvestering: voorwaardelijke verplichting (sloop, inrichtingsplan), anterieure overeenkomst, bankgarantie, planschade, antispeculatiebeding, vereveningsheffing; **eis tot beschikbaarstelling van stikstofruimte (zoals Nunspeet) niet gevonden**; stikstofvoortoets in de praktijk. | G/GD | Woonagenda p. 52-53; CVDR725681 |
+
+### C. Locatie-overlays die de provinciale toets bepalen
+Percentages [BER, indicatief; WFS `geoserver.gelderland.nl/ngr_verordening`, PDOK; peildatum 2026-10-31; alle gemeentebrede cijfers uit `provincie_gelderland.md` §1.6.8 exact gereproduceerd, behalve stikstof]:
+
+| Overlay | % gemeentegebied | % landbouwgrond (4.674,5 ha) |
+|---|---|---|
+| Gelders natuurnetwerk | 49,6 | 11,0 |
+| Groene ontwikkelingszone | 15,0 | 25,1 |
+| GNN of GOZ | 64,6 | 36,2 |
+| Natura 2000 | 45,7 | 6,3 |
+| Weidevogelgebied | 0 | 0 |
+| Ganzenrustgebied (IJsseluiterwaarden) | 3,3 | 9,0 |
+| Beschermingszone natte landnatuur | 5,9 | 10,3 |
+| Natuur-/vogeloverlay (GNN/GOZ/N2000/ganzenrust) | 67,4 | 44,3 (vrij: 55,7) |
+| Nationaal Landschap Veluwe | 91,6 | 94,8 |
+| Streek IJsselvallei | 54,6 | 95,7 |
+| Streek Veluwe (art. 5.44) | 45,4 | 4,3 |
+| Waterwin- / grondwaterbeschermingsgebied | 0,3 / 0,9 | 0 / 0 |
+| Intrekgebied (art. 4.18-4.47) | 44,5 | 64,4 |
+| Stikstofreductiegebied | 55,1 | 16,8 |
+| Buiten alle overlays van Prb 2024 nr. 3109 | — | 0,1 (6,3 ha) |
+
+| # | Bevinding | Status | Bron |
+|---|---|---|---|
+| C1 | GNN 11,0% / GOZ 25,1% van de landbouwgrond; Epe past de provinciale rekentool toe (Gortelseweg 18: −1.530 punten impact, 550 compensatie; provincie akkoord); GO-toets noemt per abuis "+2080 (−1530+550)" (som is −980). | G | A-tabel; 14808812/-20 |
+| C2 | Geen weidevogelgebied; ganzenrust 9,0% (IJsseluiterwaarden, Oene-oost); natte landnatuur 10,3%; quickscan flora/fauna bij elk plan; geen woningbouwprecedent in ganzenrustgebied. | G | [BER]; natuurtoetsen Kanaalweg 30, Stationsstraat 10-12 |
+| C3 | N2000 6,3%; stikstofreductiegebied 16,8% (provinciebestand 18,2%, kaart van 18-04-2025: de nieuwere laag verwerkt de contouraanpassing waarschijnlijk deels [INT]); PS-besluit 23-09-2026 (in werking 23-10-2026) past de contour aan (Kopermolen valt er buiten); epe.nl meldt vertraging; LBV+-locaties met planregel "geen landbouwhuisdieren"; provincie bevoegd gezag N2000-vergunningen (Baanwachter). | G | 17421427, 17480853, epe.nl |
+| C4 | Streken Veluwe/IJsselvallei (zie tabel); Epe past art. 5.38/5.44 toe met landschappelijk inpassings- en beeldkwaliteitsplan; Landschapsontwikkelingsplan "Van Veluwe tot IJssel" (2010) niet gelezen; Integrale Groenvisie 2026 (raad 24-09-2026); Nationaal Landschap Veluwe praktisch overal (94,8%). | G/GD | A-tabel; 17336952 |
+| C5 | Waterwin-/grondwaterbeschermingsgebied 0% van de landbouwgrond; **intrekgebied 64,4%**; Epe-lezing: "De functie wonen is in beginsel geen grondwaterbedreigende functie" (Kerkenland); waterschap Vallei en Veluwe; klimaatadaptatie art. 5.85 in elke motivering. | G | A-tabel; 17067375, 17336835 |
+| C6 | Netcongestie: zie §11; netbewuste-woningbouwregel (par. 5.7.8) en bodemenergie (≥ 15 woningen) niet in Epe-stukken gevonden. | GD | CVDR766228; Gemeenteblad 2026, 447571 |
+
+### D. VAB en erftransformatie
+| # | Bevinding | Status | Bron |
+|---|---|---|---|
+| D1 | Zie §4: kader + precedenten (max. 3), geen CPO-/collectief precedent; VAB niet als aparte opgave in de woonprogrammering ("geen volkshuisvestelijke opgave"). | G | CVDR723659; gmb-2026-31391 |
+| D2 | Pilot "Wonen op de boerderij", Versnellingsteam, Expertteam Woningbouw, Atelier Gelderland, Gelders Genootschap/ervenconsulent, mini-leerlijn: **0 treffers** in RIS, nieuws en web. Rijks-Woningbouwimpuls wel gebruikt ('t Slath, 2023). | NG | Zou staan bij: provincie (deelnemerslijsten), raadsinformatiebrieven, Regio Stedendriehoek |
+| D3 | Streekplanuitwerking Noord-Veluwe (2007) alleen in bestemmingsplantoelichting 2017; "Waar de stallen verdwijnen" (2008) niet genoemd; Epe heeft eigen kader. | GD | bestemmingsplan Buitengebied (toelichting 3.4.8) |
+
+### E. Procedure en provinciale betrokkenheid
+| # | Bevinding | Status | Bron |
+|---|---|---|---|
+| E1 | Regisseur Ruimte: naam niet openbaar; Epe voert vooroverleg met "ketenpartners (provincie Gelderland en Waterschap Vallei en Veluwe)"; provinciale rekentool/akkoord bij GNN/GOZ-plannen (Gortelseweg 18, Helfterkamp 2023); "Omgevingstafel Epe" is een intern gemeentelijk vooroverleg (geen provinciale tafel); Gebiedsagenda Stedendriehoek niet in Epe-stukken. | GD | 14808820, 13040135, 17336826 |
+| E2 | Beide routes (omgevingsplanwijziging door de raad; BOPA door het college); bindend raadsadvies bij BOPA ≥ 6 woningen; provinciaal advies/instemming (Prb 2024 nr. 3109) in Epe-stukken niet genoemd; doorlooptijd Koeweg 49 ≈ 11 maanden. | GD | 16863289, 17507163, 17418632; gmb-2024-45086 |
+| E3 | Geen verwijzing naar de Matrix of een werkafspraak; provincie in de praktijk vooral bij GNN/GOZ en N2000; navragen bij Hans Stijf / afdeling Ontwikkeling Omgeving. | NG | — |
+| E4 | Geen provinciale zienswijze, onthouden instemming, interventie of art. 1.6-1.7-ontheffing voor Epe-woningbouw gevonden (RIS, Provinciaal Blad-SRU, nieuws). Wel stikstofvertraging. | NG (negatief) | Prb-SRU; ORI |
+| E5 | Omgevingsplan nieuw deel bevat geen provinciale doorwerking voor woningen; toelichting art. 5.127: instructieregels van overeenkomstige toepassing; art. 6.18 (directe werking bij BOPA) niet aan de Epe-tekst getoetst. | GD | CVDR696234/5 |
+
+### F. Financiering
+| # | Bevinding | Status | Bron |
+|---|---|---|---|
+| F1 | Provinciale subsidie Collectieve wooninitiatieven: geen intentieverklaring, geen CPO-groep en geen eigen CPO-regeling gevonden (0 treffers); aanspreekpunt voor intentieverklaring: Hans Stijf / wethouder Tibben. Provinciaal: wonen@gelderland.nl [TK]. | NG | CVDR (558 werken), RIS |
+| F2 | Starterslening (epe.nl/starterslening; coalitie wil verruimen); Rijks-Woningbouwimpuls 't Slath (2023); prestatieafspraken Triada; geen gebruik gevonden van "Beter benutten", "SteenGoed Benutten", Wijken- en dorpendeals, Versnellingsteam of de provinciale grondfaciliteit. | GD | epe.nl; Vaassen Actief |
+| F3 | Leefbaarheidssubsidie (CVDR763962, eenmalig 2026) niet voor woningbouw; erfpacht maatwerk; geen kavelaanbod. | GD | CVDR763962, CVDR725681, CVDR757995 |
+
+---
+
+## Aanvullingen op het provinciebestand (nieuw sinds de stand van 2026-10-02)
+1. **L2.6 opgelost:** het Epe-kader voor functieverandering staat in de Woonagenda 2024-2028 (CVDR723659), zie §3.2 en §4. Aanbeveling: §2.6 en tabel (Epe-regel) van `provincie_gelderland.md` bijwerken.
+2. **Huisvestingsverordening:** Epe heeft een eigen verordening (CVDR649911) zonder koopregime; niet de Noord-Veluwe-verordening.
+3. **Epe-geodata:** overlaypercentages van het provinciebestand (§1.6.8) reproduceerbaar; stikstofreductiegebied-laag per 2026-10-31: 55,1% gemeente / 16,8% landbouwgrond (was 56,7%/18,2%); aanvullend: intrekgebied 44,5% / 64,4% en 0,1% van de landbouwgrond buiten alle BOPA-adviesoverlays.
+4. **Woondeal:** bevestigd 2.250 (1.350 + 900) en ouderenkader 320/175/70; toedeling 3.520 "te verdelen" (L3.5): uitkomst niet gevonden; epe.nl-concept noemt nog 4.000 en "uiterlijk 31 oktober 2025". L3.6 deels bevestigd (320/175/70 via Raadsmonitor 17-09-2026).
+5. **Afwegingskader Woonzorg:** vastgesteld door B&W 18-05-2021, in werking 18-03-2022 (CVDR674378, Epe).
+6. **Netcongestie:** Epe heeft beleidsregels en een volgordelijst (zie §11).
+
+## Tegenstrijdigheden en open punten
+1. **Opgave tot 2030/2034:** 1.350 (2025-2030, provinciebestand en woondeal-actualisatie) / 1.750 ('t Slath-pagina) / 1.789 netto (Woonagenda) / 1.800 (projectpagina's, coalitieakkoord, persberichten) / 1.843 bruto (oude woondeal): verschillende definities en generaties; 2025-2034 is 2.250 (bruto). Aandeel betaalbaar: 67% (presentatie), 70% (projectpagina), 75% (provinciebestand-berekening).
+2. **'t Slath en Zuukerenk:** provinciebestand 600 gezamenlijk; Zuukerenk ca. 450 en 't Slath ca. 250 volgens de projectpagina's (samen 700, ook in de presentatie van 17-09-2026); volgordelijst 22-09-2026: Zuukerenk 600 en 't Slath 150 (samen 750). Het verschil is niet verklaard (peildatum of afbakening).
+3. **Kerkenland:** 150 (projectlijst), 160 + 21 woonzorgwoningen (persbericht 22-09-2026), 180 (presentatie/volgordelijst), 225 (provinciebestand voor Vaassen-west); **Kopermolen** 123 (beslisnota, volgordelijst) versus 125 (presentatie).
+4. **Plancapaciteit:** provinciebestand 1.843 (100%) / 304 harde (16%) versus 2.363 "in behandeling" (105% van 2.250) in de Epe-bron; volgordelijst 1.900 woningen.
+5. **35% sociale huur:** Woonagenda "vanaf 10 woningen" (en alle uitleglocaties); Prijsklassenbeleid 2026 "vanaf 11 woningen" bij inbreiding en "ongeacht het aantal" bij uitbreiding; coalitieakkoord "35% sociale huur en betaalbare koop"; persbericht 14-08-2024 "vanaf 11 woningen". Een CPO van precies 10 woningen valt dus afhankelijk van de bron wel of niet onder de eis.
+6. **Woonagenda-datum:** raadsbesluit 11-07-2024 (Gemeenteblad, persbericht, amendement-behandeling); documentdatum 14-05-2024.
+7. **Stikstofgebied:** 56,7%/18,2% (provinciebestand, kaart 18-04-2025) versus 55,1%/16,8% (laag 31-10-2026); verschillende kaartversie.
+8. **CPO-zin in Woonagenda:** deelonderzoek 4 plaatste die bij Emst; de tekst staat in de paragraaf kern Epe (hoofdagent-controle).
+9. **GO-toets Gortelseweg 18:** "positieve balans van 2080 punten (−1530+550)" is rekenkundig −980; de provincie bevond de versterkingsopgave "akkoord".
+10. **Open:** uitslag raadsbesluit Kopermolen (15-10-2026); stemuitslag amendement VAB-staffel; inhoud Omgevingsvisie 2021 en Epe-zienswijze op de ontwerp-Omgevingsvisie 2026; VAB-evaluatie en evaluatie adviesrecht; origineel GO-toets; Zuukerenk-/'t Slath-/Kerkenland-visiedocumenten op GOZ-aspecten; Landschapsontwikkelingsplan 2010; ECLI:NL:RVS:2026:608 verder lezen (tussenuitspraak 04-02-2026 over het Herstelplan Buitengebied 2020); ECLI:NL:RVS:2018:1887 bevestigt gedeeltelijke vernietiging van het plan van 2017.
+
+## Niet gevonden en waar het wel te vinden zou zijn
+| Onderwerp | Waar te vinden |
+|---|---|
+| CPO-beleid, CPO-/zelfbouwkavels, zelfbouwloket | wethouder Wonen (Tibben) / Hans Stijf; mogelijk in het nog vast te stellen Volkshuisvestingsprogramma |
+| Volkshuisvestingsprogramma Epe | gemeenteraad (verwacht uiterlijk 1-7-2027); RIS Epe |
+| Uitkomst VAB-evaluatie en evaluatie adviesrecht raad | raadsinformatiebrieven; afdeling Ontwikkeling Omgeving |
+| Toedeling 3.520/4.000 woningen Stedendriehoek 2031-2034 (L3.5) | Regio Stedendriehoek (regiostedendriehoek.nl); RIS Apeldoorn, Deventer |
+| Provinciale zienswijzen/instemming/art. 5.64-afwijking voor Epe | Provinciaal Blad; raadsbesluiten omgevingsplan; Regio Stedendriehoek |
+| Regisseur Ruimte (naam), Matrix-werkafspraak | provincie Gelderland (omgevingsmanager/Regisseur Ruimte Stedendriehoek); Hans Stijf |
+| Pilot Wonen op de boerderij, Versnellingsteam, Atelier Gelderland, ervenconsulent | provincie Gelderland (deelnemerslijsten); gemeente |
+| Eis beschikbaarstelling stikstofruimte | anterieure overeenkomsten (niet openbaar); stikstofbeleid Epe |
+| Collegebesluitenlijsten en collegestukken | epe.nl/collegebesluiten |
+| Prestatieafspraken met corporaties (Triada, Habion, Woonzorg Nederland) | Triada / gemeente Epe, RIS |
+| Contactgegevens Hans Stijf | gemeentelijk telefoonnummer/e-mailadres via epe.nl (patroon initiaal+achternaam@epe.nl niet geverifieerd) |
+
+## Bronnen (kern; geraadpleegd 2026-10-31 t/m 2026-11-01)
+- Woonagenda 'Goed Wonen' 2024-2028 (CVDR723659 / Gemeenteblad 2024, 347577; PDF: https://www.epe.nl/sites/default/files/2024-08/Woonagenda%20Goed%20Wonen%202024%20%E2%80%93%202028.pdf); amendement SGP-CU + CDA (14310464); raadsbesluit (14213682).
+- Beleidskader Kavelsplitsing: https://zoek.officielebekendmakingen.nl/gmb-2026-31391.html. Prijsklassenbeleid 2026: https://zoek.officielebekendmakingen.nl/gmb-2026-68038.html; CVDR757074.
+- Omgevingsplan Epe (CVDR696234 v5), Nota Grondbeleid (CVDR725681), Tarieventabel 2026 (CVDR749618), Huisvestingsverordening (CVDR649911), Afwegingskader Woonzorg (CVDR674378), netcongestie (CVDR766228) via https://lokaleregelgeving.overheid.nl/CVDR<nummer>.
+- Adviesrecht/BOPA raad: Gemeenteblad 2024, 45086. Volgordelijst transportcapaciteit: Gemeenteblad 2026, 447571; beleidsregels 2026, 418741.
+- Presentatie Woningbouwontwikkeling, Raadsmonitor 17-09-2026 (Open Besluitvorming, entityId 17461850). Flexwonen-informatienota (14542170). Beslisnota Wijziging 002 'Emst en Oene' (17336826). Gortelseweg 18 (14808817). Kerkenland (17067375). Kopermolen (17421427).
+- epe.nl: https://www.epe.nl/burgemeester-en-wethouders, /coalitieakkoord-gemeente-epe-2026-2030-volledig-uitgeschreven, /verkiezingen, /omgevingsplan-wijzigen, /grond-huren-kopen-pachten, /woningbouwprojecten, /stikstofarme-zones-rond-kwetsbare-natuur, /starterslening.
+- Woondeal Stedendriehoek 2022-2030 en actualisatie 2025: https://www.epe.nl/sites/default/files/2026-08/geactualiseerde-regionale-woondeal-2.0-2025.pdf; ouderenkader: https://www.epe.nl/sites/default/files/2026-06/afsprakenkader-ouderenhuisvesting-stedendriehoek-2024.pdf.
+- Vaassen Actief (https://www.vaassenactief.nl/) voor persberichten; Omroep Gelderland (coalitie, 25-06-2026).
+- Geodata: https://geoserver.gelderland.nl/geoserver/ngr_verordening/wfs; PDOK (Kadaster bestuurlijke gebieden, BRP-gewaspercelen 2025, Natura 2000, CBS-kernen 2021, BAG).
+- Provinciebestand: [`provincie_gelderland.md`](provincie_gelderland.md).

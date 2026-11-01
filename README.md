@@ -34,6 +34,7 @@ Agrarische grond omzetten naar woningbouw hangt sterk af van lokaal en provincia
 | `gemeente_ermelo.md` | Beleidsinventarisatie gemeente Ermelo (Gelderland, woondealregio Noord-Veluwe; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-27; alle onderzoeken op Sonnet 5.5) |
 | `gemeente_harderwijk.md` | Beleidsinventarisatie gemeente Harderwijk (Gelderland, woondealregio Noord-Veluwe; vier deelonderzoeken samengevoegd met verificatieronde, 2026-10-29; alle onderzoeken op Sonnet 5.5) |
 | `gemeente_apeldoorn.md` | Beleidsinventarisatie gemeente Apeldoorn (Gelderland, woondealregio Stedendriehoek; vier deelonderzoeken samengevoegd, 2026-10-31; alle onderzoeken op Sonnet 5.5) |
+| `gemeente_epe.md` | Beleidsinventarisatie gemeente Epe (Gelderland, woondealregio Stedendriehoek; vier deelonderzoeken samengevoegd met toetsronde, 2026-11-01; alle onderzoeken op Sonnet 5.5) |
 | `ruwe-data/` | Gefilterde ruwe deelonderzoeksdata (deelrapporten, scripts, kleine tabellen) per gemeente; zie `ruwe-data/README.md` |
 
 ## Doel van prompt.md
