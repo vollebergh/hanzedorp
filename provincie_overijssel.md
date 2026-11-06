@@ -47,6 +47,8 @@
 
 ---
 
+**Actualisatie 2026-11-06 (DSO/RP-ronde, Claude Sonnet 5.5, effort high; bron: DSO-Ozon Presenteren v8, geraadpleegd 2026-11-06; zie `dso-inventarisatie.md` en de gemeenterapporten):** (1) Bijlage VII (Catalogus Gebiedskenmerken) staat in Ozon alleen als PDF-bijlage en wordt toegepast via art. 4.9 en 4.10 van de Omgevingsverordening Overijssel (in werking 01-07-2026); art. 4.4, 4.5, 4.11, 4.123 en 4.124 zijn in Ozon bevestigd. (2) Ozon bevat per gemeente een 'Voorbereidingsbesluit Omgevingsverordening 2021 – gemeente X' (voorbeschermingsregels, in werking 2024-01-01; o.a. Kampen, Zwolle, Deventer, Dalfsen, Ommen, Raalte, Hellendoorn, Zwartewaterland); de inhoud is nog niet gelezen. (3) Ozon bevat ook de ontwerpen van het Volkshuisvestingsprogramma Overijssel 2026-2035 en de verordening-actualisatie 2026-2; een vastgestelde versie staat er nog niet. (4) Het tijdelijk deel (RP) is in de tien Overijsselse gemeenten overal geldend, behalve de kleine ponsen in Kampen (H21 Broekswetering) en Zwolle. De overgangstermijn tijdelijk deel is 01-01-2032. (5) Correcties uit de gemeenten: Zwolle CVDR726092 (drempel > 5 woningen) is vervallen, opvolger CVDR744314; Ommen-plan-ID `buiten201200001` bestaat niet in de RP-API (moederplan `NL.IMRO.0175.20131003006-vg01`).
+
 ## 1. Provinciale omgevingsvisie en Groene Omgeving
 
 ### 1.1 Status van het beleidsdocument
