@@ -1,0 +1,18 @@
+# DSO/RP-aanvullingsronde 2026-11-06 — Elburg (gm0230 / RP 0230)
+
+Model: Claude Sonnet 5.5 (claude-sonnet-5-5), effort high. Geen sleutels of bronbestanden; alleen commando's en kleine uittreksels.
+
+## Commando's
+- `tools/dso.py regelingen gm0230 [--ontwerp]`, `pons gm0230`, `vergunningen gm0230`, `tekst /akn/nl/act/gm0230/2020/omgevingsplan` (versie 6), `tekst /akn/nl/act/gm0230/2025/omgevingsvisie`
+- `tools/dso.py rp-plannen 0230 [--tam] --grep ...`, `rp-tekst NL.IMRO.0230.BPBUITENGEB2018-VST1` (364 kB)
+- Ontwerp-omgevingsplannen via eigen scratchpad-script (tool-fout bij `--ontwerp`, zie eindrapport).
+- `tools/ori.py search/get` (bron `elburg`, iBabs)
+
+## Bevindingen
+1. **Geen pons**; Ozon-omgevingsplan versie 6, in werking 2026-05-26; Ozon-omgevingsvisie in werking 2026-01-13; geen programma's; twee ontwerp-omgevingsplanbesluiten (2025-06-20 en 2026-06-10, 0,9 MB elk) en een ontwerp-omgevingsvisie-besluit. Geen TAM-plannen in de RP-API.
+2. **Nieuw deel (versie 6)**: structuur Hoofdstuk 3 Gebiedstypen (3.4 Halfopen landschap, 3.5 Open landschap, ...), Hoofdstuk 4 Functies (Afdeling 4.18 Functie wonen); in de API-tekst heeft "Functie wonen" geen artikeltekst (normen zitten in annotaties); zoektermen Gerichtenweg/Hoge Enk/Hasenest: 0 treffers. Het tijdelijk deel blijft voor wonen in het buitengebied bepalend.
+3. **Buitengebied Elburg 2012, actualisatie 2018 (`NL.IMRO.0230.BPBUITENGEB2018-VST1`)**: art. 3.6.3 (en 4.7.3, 5.6.2, 11.6.4) omschakeling van agrarisch bedrijf naar wonen: "het aantal woningen beperkt dient te blijven tot het bestaande aantal woningen"; landschapsplan, realisatie binnen 3 jaar; "geen sprake is van significante effecten op kernkwaliteiten van de Groene Ontwikkelingszone". Art. 28 Wonen - VAB: bestemming voor "wonen in woningen die zijn gerealiseerd op basis van een regeling Vrijgekomen Agrarische Bebouwing" (inhoud <= 750 m3; maatvoering per adres in Bijlage 6; erfinrichtingsplannen Bijlage 7). Art. 41/43: algemene wijzigingen (uitruil van woningen, verplaatsing, geen extra woningen).
+4. **Omgevingsvisie (Ozon-tekst)**: par. 12.1 Kostenverhaal en financiële bijdragen: activiteiten als "potentiële dragers voor financiële bijdragen" (o.a. recreatief wonen naar permanent wonen), samenhang kostenvragers/kostendragers (o.a. sociale woningbouw: locaties kunnen onder voorwaarden afwijken van de norm en financieel compenseren), financiële draagkracht van de locatie, businesscase bij onvermogen. Bijlagen 9 (Specificatie bouwactiviteiten kostenverhaal) en 10 (Specificatie samenhang kostenvragers en kostendragers) staan niet in Ozon; verwezen wordt naar https://www.elburg.nl/bijlagenomgevingsvisie (niet geraadpleegd). Tekst r. 614: "Nieuwe woningen. Op plekken waar reeds een woning is ... kan een woning worden toegevoegd. Ook kan, wanneer er nog voormalige agrarische bebouwing op het erf aanwezig is, ter compensatie van de sloop ... een extra woning worden toegevoegd".
+5. **Vergunningen in Ozon (14)**: geen BOPA's of functiewijzigingen naar wonen op agrarische grond; wel 24 woningen Bosanemoon/Houtwallen 't Harde (2026-07-13, kern).
+6. **ORI**: Raadsbrief Ruimtelijk initiatief hoek Tempelweg-Melksteeg (12-05-2026; principemedewerking college 31-03-2026 voor kleinschalig woonerf voor vitale senioren 't Hasenest; raad krijgt bindend advies); schriftelijke raadsvragen CDA (22-10-2026, ontvangen 02-11-2026). Antwoord college niet gevonden.
+7. Verordening versie 10: art. 5.33, 5.62a (Noord-Veluwe), 5.85 en hoofdstuk 4a bevestigd; stikstofreductiegebied-oppervlak Elburg gelijk aan oude strook (47,4%/9,4%) is consistent met de toelichting (grenzen "bijna identiek").
