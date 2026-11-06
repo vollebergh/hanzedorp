@@ -1,0 +1,15 @@
+# DSO/RP-aanvullingsronde 2026-11-06 — Hattem (gm0244 / RP 0244)
+
+Model: Claude Sonnet 5.5 (claude-sonnet-5-5), effort high. Geen sleutels of bronbestanden; alleen commando's en kleine uittreksels.
+
+## Commando's
+- `tools/dso.py rp-info NL.IMRO.0244.bpChwBuitengebied-0003`, `rp-tekst NL.IMRO.0244.bpChwBuitengebied-0003` (571 kB), `rp-plannen 0244 --tam`, `rp-tekst NL.IMRO.0244.TAMOPIerstweg2-0003`
+- `tools/dso.py regelingen gm0244 [--ontwerp]`, `pons gm0244`, `vergunningen gm0244`
+
+## Bevindingen
+1. **Geen pons**; Ozon-omgevingsplan, in werking 2024-04-04; geen ontwerpen of programma's/omgevingsvisie in Ozon; geen BOPA/woning-vergunningen in de 45 Ozon-vergunningtitels.
+2. **Chw-bestemmingsplan Buitengebied** `NL.IMRO.0244.bpChwBuitengebied-0003` (vastgesteld 2023-06-05, besluitnr 89): regelStatus geldend, dossierstatus **"deels in werking"**. Gebiedstypen Poldergebied (art. 3), Kernrand (art. 4), Bosgebied (art. 5). Art. 37 (omgevingsvergunning initiatieven 8, 16, 18, 19, 21, 22, 28, 33, 47-52: bijdrage aan omgevingskwaliteit getoetst aan de beleidsregel Afwegingskader Buitengebied Hattem; participatie; kostenverhaal conform Chw/exploitatiegebied). Art. 38.3 (Poldergebied) en 39.2 (Kernrand): "c. Bij functiewijziging van (agrarische) bedrijfsactiviteiten naar maatschappelijke functies, zorg, wonen en recreatie dient het bestaande gebruik blijvend te worden gestopt en dient te worden voldaan aan het gemeentelijk beleid met betrekking tot functieverandering. d. Het totale aantal te realiseren woningen in het Poldergebied en de Kernrand moet passend zijn bij de schaal van het buitengebied van Hattem. Wat hieronder wordt verstaan en wanneer het maximum aantal is bereikt wordt beoordeeld aan de hand van de beleidsregel Afwegingskader Buitengebied Hattem." Art. 38.3 b: functiewijziging naar wonen alleen binnen bestemmingsvlakken waar hoofdgebouwen zijn toegestaan (uitzondering Geldersedijk). Art. 38.3 e: "Nieuwvestiging van (agrarische) bedrijven is niet toegestaan." Art. 38.3 g: tot maart 2026 max. 15 ha zonneparken. Art. 36 Wonen. Het plan telt geen woningaantal; het getal 80 staat alleen in het Afwegingskader (CVDR698999).
+3. **Bijlage 21 "Reactienota Zienswijzen 2023"**: in de API alleen als kop zonder tekst; de toelichting (10.1.7) zegt dat de reactienota de zienswijzen op het tweede ontwerp (22 indieners) beantwoordt; een provinciale vooroverlegreactie staat niet in de beschikbare tekst (bijlage 20 = Reactienota 13-10-2022, 38 zienswijzen). De provinciale reactie is dus hier niet te achterhalen.
+4. **TAM**: één plan, `NL.IMRO.0244.TAMOPIerstweg2-0003` (Ierstweg 2, vastgesteld 2026-06-01): bedrijfs-/agrarische functies, 1 bedrijfswoning per bestemmingsvlak; geen woningcluster.
+5. Toelichting Chw-plan noemt de oude Omgevingsverordening-artikelen 2.2 (woonagenda), 2.30 (Plussenbeleid): oude nummering, te vergelijken met art. 5.64 in versie 10 van de verordening.
+6. Verordening versie 10: art. 5.5, 5.19-5.25, 5.27-5.31, 5.33, 5.62a, 5.64 bevestigd; hoofdstuk 4a/5.97-5.101 zie rapport.
