@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Client voor DSO-Ozon (Presenteren v8) en de Ruimtelijke Plannen API (v4).
 
-Sleutels: `dso.txt` (Ozon, header x-api-key) en `rp.txt` (Ruimtelijke Plannen, header
-X-Api-Key) in de hoofdmap van de repo (of via $DSO_KEY_FILE / $RP_KEY_FILE). Beide staan in
-.gitignore; de sleutels worden nooit geprint. Alleen standaardbibliotheek; draai met `python3 -I`.
+Sleutels: keyring-service `dso`, user `presenteren-v8` (Ozon, header x-api-key) en
+`ruimtelijke-plannen-v4` (Ruimtelijke Plannen, header X-Api-Key); fallback `dso.txt`/`rp.txt` in de
+hoofdmap (of $DSO_KEY_FILE / $RP_KEY_FILE; gitignored). De sleutels worden nooit geprint. Alleen standaardbibliotheek; draai met `python3 -I`.
 
 Commando's:
   regelingen GM [--ontwerp] [--type RE]       regelingen of ontwerpregelingen van bevoegd gezag (gm0285, pv25)
@@ -23,12 +23,26 @@ OZON = 'https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api
 RP = 'https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4'
 
 
-def _key(env, fname):
-    p = os.environ.get(env) or os.path.join(ROOT, fname)
+def _key(env, fname, user):
+    """Sleutel uit de keyring (service `dso`), met bestand als fallback (zie srd: § Zoek-API's / keyrings.cryptfile)."""
+    p = os.environ.get(env)
+    if not p:
+        snippet = (
+            "import getpass,keyring;from keyrings.cryptfile.cryptfile import CryptFileKeyring;"
+            "getpass.getpass=lambda prompt='',stream=None:open('/home/nick/.secrets/keyring_pass').read().strip();"
+            f"keyring.set_keyring(CryptFileKeyring());print(keyring.get_password('dso','{user}') or '')")
+        try:
+            import subprocess
+            v = subprocess.run(['/home/nick/.venv/bin/python3', '-I', '-c', snippet], capture_output=True, text=True, timeout=60).stdout.strip()
+            if v:
+                return v
+        except (OSError, subprocess.SubprocessError):
+            pass
+        p = os.path.join(ROOT, fname)
     try:
         return open(p).read().strip()
     except OSError:
-        sys.exit(f'sleutelbestand {p} niet gevonden')
+        sys.exit(f'sleutel niet gevonden (keyring dso/{user} en bestand {p})')
 
 
 def call(url, key, hdr, body=None, crs=None, tries=5):
@@ -56,14 +70,14 @@ def ozon(path, body=None, crs=None, **q):
     u = (path if path.startswith('http') else OZON + path)
     if q:
         u += ('&' if '?' in u else '?') + urllib.parse.urlencode(q)
-    return call(u, _key('DSO_KEY_FILE', 'dso.txt'), 'x-api-key', body, crs)
+    return call(u, _key('DSO_KEY_FILE', 'dso.txt', 'presenteren-v8'), 'x-api-key', body, crs)
 
 
 def rp(path, body=None, crs=None, **q):
     u = (path if path.startswith('http') else RP + path)
     if q:
         u += ('&' if '?' in u else '?') + urllib.parse.urlencode(q)
-    return call(u, _key('RP_KEY_FILE', 'rp.txt'), 'X-Api-Key', body, crs)
+    return call(u, _key('RP_KEY_FILE', 'rp.txt', 'ruimtelijke-plannen-v4'), 'X-Api-Key', body, crs)
 
 
 def pages(fn, path, embedded, body=None, **q):
